@@ -183,33 +183,33 @@ Week 7-8: Practice/ + Review + Exam preparation
 ## Key Features ✨
 *"What makes this repository better than that one folder on your desktop named 'New Folder (37)'"*
 
-### Multiple Learning Formats 🎭
+### Multiple Learning Formats
 *"Because one size fits nobody"*
-- **Detailed explanations** - for the "I need to understand every molecule" people 🔬
-- **Summary notes** - for the "just give me the TL;DR" crowd ⏱️
-- **Hinglish content** - *kyunki English mein sab samajh nahi aata* 😄
-- **Hands-on tutorials** - because theory without practice is just expensive daydreaming 💭
+- **Detailed explanations** - for the "I need to understand every molecule" people
+- **Summary notes** - for the "just give me the TL;DR" crowd 
+- **Hinglish content** - *kyunki English mein sab samajh nahi aata*
+- **Hands-on tutorials** - because theory without practice is just expensive daydreaming
 
-### University Alignment 🏯
+### University Alignment
 *"We actually read the syllabus (shocking!)"*
-- Follows official CST-043 curriculum (every boring detail) 📄
-- Covers prescribed textbooks (even the parts that make you question your life choices) 📚
-- Assessment-focused materials (because grades matter, unfortunately) 🎯
-- Structured for semester exams (cramming-friendly design) ⏰
+- Follows official CST-043 curriculum (every boring detail)
+- Covers prescribed textbooks (even the parts that make you question your life choices) 
+- Assessment-focused materials (because grades matter, unfortunately)
+- Structured for semester exams (cramming-friendly design)
 
-### Industry Readiness 💼
+### Industry Readiness
 *"Making you employable since... well, now"*
-- Modern tools (not from the stone age) 🔧
-- Real-world case studies (actual companies, actual problems) 🏢
-- Implementation guides (step-by-step, no black magic) 🪄
-- Best practices (learned from other people's mistakes) 🤦‍♂️
+- Modern tools (not from the stone age)
+- Real-world case studies (actual companies, actual problems)
+- Implementation guides (step-by-step, no black magic)
+- Best practices (learned from other people's mistakes)
 
-### Flexible Navigation 🧭
+### Flexible Navigation
 *"Like GPS, but for learning (and less likely to send you into a lake)"*
-- Multiple entry points (democracy in action!) 🚪
-- Cross-referenced content (everything connects, it's beautiful) 🔗
-- Progressive skill building (from noob to... slightly experienced noob) 📈
-- Self-paced learning (because I'm not a monster) 🐌
+- Multiple entry points (democracy in action!)
+- Cross-referenced content (everything connects, it's beautiful)
+- Progressive skill building (from noob to... slightly experienced noob)
+- Self-paced learning (because I'm not a monster)
 
 ---
 
