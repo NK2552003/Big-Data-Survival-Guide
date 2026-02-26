@@ -279,10 +279,24 @@ Week 7-8: Practice/ + Review + Exam preparation
 
 ---
 
+## Project Documentation
+*"Important docs you'll actually need"*
+
+- [Contributing Guide](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Changelog](CHANGELOG.md)
+
+---
+
 ## Contributing
 *"Help us make this even more awesome (if that's possible)"*
 
-This repository is maintained for educational purposes (and my sanity). For suggestions or corrections:
+This repository is maintained for educational purposes (and my sanity).
+
+For full contribution workflow, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+For quick suggestions or corrections:
 - Focus on accuracy and clarity (I have enough confusion already)
 - Maintain alignment with university curriculum (because rules exist)
 - Ensure content supports both academic and practical learning (best of both worlds)
