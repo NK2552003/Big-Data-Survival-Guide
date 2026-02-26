@@ -1,3 +1,5 @@
+![Big Data Survival Guide Banner](https://raw.githubusercontent.com/NK2552003/Big-Data-Survival-Guide/main/Image/poster.jpg)
+
 # Big Data Analytics - Where Small Data Feels Inadequate! 
 
 ## Veer Madho Singh Bhandari Uttarakhand Technical University, Dehradun
