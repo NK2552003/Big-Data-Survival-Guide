@@ -36,12 +36,11 @@ A Big Data platform is an environment where data is stored, managed, and analyze
 
 ```mermaid
 flowchart LR
-    A[Data Sources]
-    --> B[Ingestion (Kafka/Flume)]
-    --> C[Distributed Storage (HDFS/S3)]
-    --> D[Processing (Spark/MapReduce)]
-    --> E[Analytics/BI Tools]
-    --> F[Users/Applications]
+    A[Data Sources] --> B[Ingestion (Kafka/Flume)]
+    B --> C[Distributed Storage (HDFS/S3)]
+    C --> D[Processing (Spark/MapReduce)]
+    D --> E[Analytics/BI Tools]
+    E --> F[Users/Applications]
 ```
 
 > **Real World Use:** Netflix stores user activity logs in HDFS and processes them with Spark to recommend movies.
