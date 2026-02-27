@@ -171,12 +171,12 @@ Semi-structured data lies between structured and unstructured data. It doesn’t
 
 ```json
 {
-  "employee": {
-    "id": 101,
-    "name": "Alice Brown",
-    "department": "Sales",
-    "skills": ["Negotiation", "CRM", "Communication"]
-  }
+ "employee": {
+ "id": 101,
+ "name": "Alice Brown",
+ "department": "Sales",
+ "skills": ["Negotiation", "CRM", "Communication"]
+ }
 }
 ```
 
@@ -229,37 +229,37 @@ Before databases, data was stored in traditional **file systems**, which were si
 ### **Key Reasons We Need Databases:**
 
 1. **Efficient Data Management**
-    
-    Databases allow efficient storage, retrieval, and manipulation of large volumes of data. They provide indexing, caching, and query optimization, which make operations faster compared to manual file searching.
-    
+
+ Databases allow efficient storage, retrieval, and manipulation of large volumes of data. They provide indexing, caching, and query optimization, which make operations faster compared to manual file searching.
+
 2. **Data Integrity and Accuracy**
-    
-    Databases enforce rules and constraints (like primary keys, foreign keys, and data types) to maintain accuracy and consistency in data. For example, a database can ensure that no two customers have the same ID or that an order cannot exist without a customer.
-    
+
+ Databases enforce rules and constraints (like primary keys, foreign keys, and data types) to maintain accuracy and consistency in data. For example, a database can ensure that no two customers have the same ID or that an order cannot exist without a customer.
+
 3. **Security and Controlled Access**
-    
-    Databases provide authentication, authorization, and encryption features to protect sensitive data. Users can be granted specific permissions — for example, an employee may only view data while an administrator can modify or delete it.
-    
+
+ Databases provide authentication, authorization, and encryption features to protect sensitive data. Users can be granted specific permissions — for example, an employee may only view data while an administrator can modify or delete it.
+
 4. **Concurrent Access**
-    
-    Databases allow multiple users to access and work with data simultaneously without conflicts. Transaction control mechanisms like **locking** and **commit/rollback** ensure data consistency even when many users are working at once.
-    
+
+ Databases allow multiple users to access and work with data simultaneously without conflicts. Transaction control mechanisms like **locking** and **commit/rollback** ensure data consistency even when many users are working at once.
+
 5. **Scalability**
-    
-    Databases can handle vast amounts of data and users efficiently. They can scale both vertically (more powerful hardware) and horizontally (adding more servers).
-    
+
+ Databases can handle vast amounts of data and users efficiently. They can scale both vertically (more powerful hardware) and horizontally (adding more servers).
+
 6. **Data Relationships and Complex Queries**
-    
-    Databases can easily represent relationships between data entities (such as customers and orders) and allow complex queries to retrieve related information efficiently.
-    
+
+ Databases can easily represent relationships between data entities (such as customers and orders) and allow complex queries to retrieve related information efficiently.
+
 7. **Data Recovery and Backup**
-    
-    Modern databases offer automatic backup, recovery, and fault-tolerance mechanisms. In case of system failure, data can be restored without losing integrity.
-    
+
+ Modern databases offer automatic backup, recovery, and fault-tolerance mechanisms. In case of system failure, data can be restored without losing integrity.
+
 8. **Reduced Data Redundancy**
-    
-    Using normalization and relational structures, databases minimize duplication, ensuring data consistency and efficient storage.
-    
+
+ Using normalization and relational structures, databases minimize duplication, ensuring data consistency and efficient storage.
+
 
 **Example Scenario:**
 
@@ -292,26 +292,26 @@ Let’s understand the differences between the two:
 **Illustration:**
 
 - **File System Example:**
-    
-    You might have three separate text files:
-    
-    - `customers.txt` (list of customers)
-    - `orders.txt` (list of orders)
-    - `products.txt` (list of products)
-    
-    To find all orders by a specific customer, you’d have to manually cross-reference the data across files — a time-consuming and error-prone process.
-    
+
+ You might have three separate text files:
+
+ - `customers.txt` (list of customers)
+ - `orders.txt` (list of orders)
+ - `products.txt` (list of products)
+
+ To find all orders by a specific customer, you’d have to manually cross-reference the data across files — a time-consuming and error-prone process.
+
 - **Database Example:**
-    
-    In a relational database, you can simply execute an SQL query:
-    
-    ```sql
-    SELECT * FROM Orders
-    WHERE CustomerID = 101;
-    ```
-    
-    This instantly retrieves all orders placed by the customer with ID 101.
-    
+
+ In a relational database, you can simply execute an SQL query:
+
+ ```sql
+ SELECT * FROM Orders
+ WHERE CustomerID = 101;
+ ```
+
+ This instantly retrieves all orders placed by the customer with ID 101.
+
 
 **Conclusion:**
 
@@ -335,41 +335,41 @@ In simple terms, a DBMS is the **software layer** that enables you to create, re
 ### **Functions of a DBMS**
 
 1. **Data Storage and Retrieval:**
-    
-    Provides efficient methods to store large datasets and retrieve them quickly using query languages (e.g., SQL).
-    
+
+ Provides efficient methods to store large datasets and retrieve them quickly using query languages (e.g., SQL).
+
 2. **Data Definition:**
-    
-    Allows users to define data structures, schemas, and relationships using Data Definition Language (DDL).
-    
+
+ Allows users to define data structures, schemas, and relationships using Data Definition Language (DDL).
+
 3. **Data Manipulation:**
-    
-    Enables insertion, deletion, updating, and querying of data using Data Manipulation Language (DML).
-    
+
+ Enables insertion, deletion, updating, and querying of data using Data Manipulation Language (DML).
+
 4. **Transaction Management:**
-    
-    Ensures that all database transactions follow the **ACID properties** (Atomicity, Consistency, Isolation, Durability) to maintain reliability and integrity.
-    
+
+ Ensures that all database transactions follow the **ACID properties** (Atomicity, Consistency, Isolation, Durability) to maintain reliability and integrity.
+
 5. **Concurrency Control:**
-    
-    Manages simultaneous access by multiple users to ensure that one user’s operations don’t interfere with another’s.
-    
+
+ Manages simultaneous access by multiple users to ensure that one user’s operations don’t interfere with another’s.
+
 6. **Security Management:**
-    
-    Controls access through user authentication, roles, and permissions to prevent unauthorized data usage.
-    
+
+ Controls access through user authentication, roles, and permissions to prevent unauthorized data usage.
+
 7. **Backup and Recovery:**
-    
-    Maintains data safety by automatically backing up data and restoring it in case of failure.
-    
+
+ Maintains data safety by automatically backing up data and restoring it in case of failure.
+
 8. **Data Integrity Enforcement:**
-    
-    Enforces rules like primary keys, foreign keys, and constraints to ensure data correctness and consistency.
-    
+
+ Enforces rules like primary keys, foreign keys, and constraints to ensure data correctness and consistency.
+
 9. **Data Independence:**
-    
-    Separates data storage from application logic so that changes in database structure do not affect the application code.
-    
+
+ Separates data storage from application logic so that changes in database structure do not affect the application code.
+
 
 ### **Advantages of a DBMS**
 
@@ -551,10 +551,10 @@ Below are some of the most popular RDBMS platforms:
 - **Overview:** One of the most popular open-source relational databases, widely used in web applications.
 - **Developed by:** Oracle Corporation.
 - **Features:**
-    - Supports ACID compliance and transactions.
-    - Highly compatible with web frameworks (e.g., PHP, Django).
-    - Uses SQL for querying.
-    - Scalable and fast for small to medium applications.
+ - Supports ACID compliance and transactions.
+ - Highly compatible with web frameworks (e.g., PHP, Django).
+ - Uses SQL for querying.
+ - Scalable and fast for small to medium applications.
 - **Use Cases:** E-commerce sites, blogs, web apps (e.g., WordPress, YouTube).
 
 ### **2. PostgreSQL**
@@ -562,10 +562,10 @@ Below are some of the most popular RDBMS platforms:
 - **Overview:** A powerful, open-source object-relational database system.
 - **Developed by:** PostgreSQL Global Development Group.
 - **Features:**
-    - Fully ACID-compliant.
-    - Supports advanced features like JSON data types, indexing, and full-text search.
-    - Extensible — developers can create custom functions and data types.
-    - Highly reliable and secure.
+ - Fully ACID-compliant.
+ - Supports advanced features like JSON data types, indexing, and full-text search.
+ - Extensible — developers can create custom functions and data types.
+ - Highly reliable and secure.
 - **Use Cases:** Data analytics, scientific applications, and systems requiring high reliability.
 
 ### **3. Oracle Database**
@@ -573,10 +573,10 @@ Below are some of the most popular RDBMS platforms:
 - **Overview:** A commercial enterprise-level RDBMS known for scalability, robustness, and performance.
 - **Developed by:** Oracle Corporation.
 - **Features:**
-    - Supports massive enterprise workloads.
-    - Advanced transaction control, clustering, and high availability.
-    - Strong security and backup features.
-    - Multi-model support (relational, JSON, spatial, etc.).
+ - Supports massive enterprise workloads.
+ - Advanced transaction control, clustering, and high availability.
+ - Strong security and backup features.
+ - Multi-model support (relational, JSON, spatial, etc.).
 - **Use Cases:** Banking, telecom, enterprise resource planning (ERP) systems, and mission-critical applications.
 
 ### **Limitations of SQL Databases**
@@ -757,13 +757,13 @@ Documents are self-describing and can have different structures within the same 
 
 ```json
 {
-  "_id": 101,
-  "name": "Alice Brown",
-  "email": "alice@example.com",
-  "purchases": [
-    {"item": "Laptop", "price": 1200},
-    {"item": "Mouse", "price": 25}
-  ]
+ "_id": 101,
+ "name": "Alice Brown",
+ "email": "alice@example.com",
+ "purchases": [
+ {"item": "Laptop", "price": 1200},
+ {"item": "Mouse", "price": 25}
+ ]
 }
 ```
 
@@ -1008,23 +1008,23 @@ Twitter handles hundreds of millions of users and **billions of tweets** each mo
 **How Twitter Scales:**
 
 1. **Distributed Storage:**
-    
-    Twitter uses distributed databases and caching systems to store user data and timelines across multiple servers and data centers.
-    
-    Technologies like **Manhattan (Twitter’s distributed database)** and **Cassandra** ensure horizontal scalability.
-    
+
+ Twitter uses distributed databases and caching systems to store user data and timelines across multiple servers and data centers.
+
+ Technologies like **Manhattan (Twitter’s distributed database)** and **Cassandra** ensure horizontal scalability.
+
 2. **Sharding:**
-    
-    User data is partitioned (“sharded”) across multiple databases. For example, one shard might store users 1–10 million, while another stores 10–20 million.
-    
+
+ User data is partitioned (“sharded”) across multiple databases. For example, one shard might store users 1–10 million, while another stores 10–20 million.
+
 3. **Caching for Performance:**
-    
-    To handle high read traffic, Twitter uses **Redis** and **Memcached** as caching layers. Frequently accessed data (like timelines) is served from cache instead of databases, reducing latency.
-    
+
+ To handle high read traffic, Twitter uses **Redis** and **Memcached** as caching layers. Frequently accessed data (like timelines) is served from cache instead of databases, reducing latency.
+
 4. **Microservices Architecture:**
-    
-    Twitter broke its monolithic backend into multiple smaller services (e.g., Tweet Service, User Service, Search Service). This enables independent scaling of specific parts of the system.
-    
+
+ Twitter broke its monolithic backend into multiple smaller services (e.g., Tweet Service, User Service, Search Service). This enables independent scaling of specific parts of the system.
+
 
 **Outcome:**
 
@@ -1045,21 +1045,21 @@ Instagram serves over a billion active users who share photos, videos, reels, an
 **How Instagram Scales:**
 
 1. **Use of Distributed Databases:**
-    
-    Instagram originally used **PostgreSQL**, but as data grew, they moved toward a **sharded relational database model** and **NoSQL systems** like **Cassandra** for scalability.
-    
+
+ Instagram originally used **PostgreSQL**, but as data grew, they moved toward a **sharded relational database model** and **NoSQL systems** like **Cassandra** for scalability.
+
 2. **Content Delivery Networks (CDNs):**
-    
-    To reduce latency, Instagram uses global CDNs to deliver images and videos quickly, regardless of user location.
-    
+
+ To reduce latency, Instagram uses global CDNs to deliver images and videos quickly, regardless of user location.
+
 3. **Caching Layers:**
-    
-    Systems like **Redis** and **Memcached** store frequently accessed content, minimizing database hits.
-    
+
+ Systems like **Redis** and **Memcached** store frequently accessed content, minimizing database hits.
+
 4. **Microservices and Cloud Scaling:**
-    
-    Instagram leverages **Amazon Web Services (AWS)** for auto-scaling, allowing the infrastructure to dynamically allocate more servers during traffic spikes.
-    
+
+ Instagram leverages **Amazon Web Services (AWS)** for auto-scaling, allowing the infrastructure to dynamically allocate more servers during traffic spikes.
+
 
 **Outcome:**
 
@@ -1080,21 +1080,21 @@ In large-scale distributed systems, **downtime is unacceptable**, as it leads to
 **Key Aspects of HA:**
 
 1. **Redundancy:**
-    
-    Data and services are duplicated across multiple servers and regions. If one node fails, another immediately takes over.
-    
+
+ Data and services are duplicated across multiple servers and regions. If one node fails, another immediately takes over.
+
 2. **Replication:**
-    
-    Copies of data are maintained in different locations. For example, MongoDB or Cassandra automatically replicate data across clusters.
-    
+
+ Copies of data are maintained in different locations. For example, MongoDB or Cassandra automatically replicate data across clusters.
+
 3. **Failover Mechanisms:**
-    
-    When a server or service crashes, traffic is automatically redirected to healthy nodes without interrupting service.
-    
+
+ When a server or service crashes, traffic is automatically redirected to healthy nodes without interrupting service.
+
 4. **Load Balancing:**
-    
-    Incoming requests are distributed evenly among multiple servers to prevent overload on any single node.
-    
+
+ Incoming requests are distributed evenly among multiple servers to prevent overload on any single node.
+
 
 **Example:**
 
@@ -1119,25 +1119,25 @@ In large-scale data systems, maintaining low latency is critical because:
 **Techniques for Achieving Low Latency:**
 
 1. **Caching:**
-    
-    Frequently accessed data is stored in memory (Redis, Memcached) for faster retrieval.
-    
+
+ Frequently accessed data is stored in memory (Redis, Memcached) for faster retrieval.
+
 2. **Data Partitioning (Sharding):**
-    
-    Dividing data across multiple servers reduces the load on any single database.
-    
+
+ Dividing data across multiple servers reduces the load on any single database.
+
 3. **Geographical Distribution:**
-    
-    Using **Content Delivery Networks (CDNs)** and **edge servers** ensures data is served from the nearest physical location.
-    
+
+ Using **Content Delivery Networks (CDNs)** and **edge servers** ensures data is served from the nearest physical location.
+
 4. **Asynchronous Processing:**
-    
-    Background tasks (like sending notifications or processing analytics) are handled asynchronously using message queues (e.g., Kafka, RabbitMQ), preventing delays in core functions.
-    
+
+ Background tasks (like sending notifications or processing analytics) are handled asynchronously using message queues (e.g., Kafka, RabbitMQ), preventing delays in core functions.
+
 5. **Optimized Data Models:**
-    
-    Storing data in formats that align with access patterns (e.g., key-value lookups for quick reads).
-    
+
+ Storing data in formats that align with access patterns (e.g., key-value lookups for quick reads).
+
 
 **Example:**
 
@@ -1181,25 +1181,25 @@ From your perspective, Google feels like one single search engine, but in realit
 ### **Key Characteristics of Distributed Systems:**
 
 1. **Multiple Nodes:**
-    
-    Consists of several independent computers (servers or nodes) connected via a network.
-    
+
+ Consists of several independent computers (servers or nodes) connected via a network.
+
 2. **Shared Goal:**
-    
-    Nodes cooperate to perform a unified function (e.g., serving web pages, processing data).
-    
+
+ Nodes cooperate to perform a unified function (e.g., serving web pages, processing data).
+
 3. **Transparency:**
-    
-    Users see the system as one entity, even though it’s made of many machines.
-    
+
+ Users see the system as one entity, even though it’s made of many machines.
+
 4. **Fault Tolerance:**
-    
-    The system continues to function even if some nodes fail.
-    
+
+ The system continues to function even if some nodes fail.
+
 5. **Scalability:**
-    
-    New machines can be added to handle more data or users.
-    
+
+ New machines can be added to handle more data or users.
+
 
 **Examples of Distributed Systems:**
 
@@ -1222,9 +1222,9 @@ For example:
 
 - Amazon handles millions of orders every day.
 - Netflix streams millions of videos simultaneously.
-    
-    These would be impossible on one server; distributing the workload across many servers ensures scalability.
-    
+
+ These would be impossible on one server; distributing the workload across many servers ensures scalability.
+
 
 ### **B. Fault Tolerance and Reliability**
 
@@ -1382,28 +1382,28 @@ Let’s look at how global companies implement distributed systems to achieve sc
 
 - **Challenge:** Billions of search queries every day across the world.
 - **Distributed Design:**
-    - Index data spread across thousands of servers in multiple data centers.
-    - Each server handles a portion of the web index.
-    - Uses **load balancing** to distribute incoming queries.
-    - Employs **caching** for fast query responses.
+ - Index data spread across thousands of servers in multiple data centers.
+ - Each server handles a portion of the web index.
+ - Uses **load balancing** to distribute incoming queries.
+ - Employs **caching** for fast query responses.
 - **Goal:** Sub-second responses globally with continuous availability.
 
 ### **B. Amazon Shopping**
 
 - **Challenge:** Millions of users, product listings, and orders worldwide.
 - **Distributed Design:**
-    - Uses microservices architecture (independent services for product search, cart, payments, etc.).
-    - Data is replicated and distributed across multiple regions.
-    - Employs **NoSQL databases (like DynamoDB)** for high availability.
-    - Uses **load balancing and failover** for reliability.
+ - Uses microservices architecture (independent services for product search, cart, payments, etc.).
+ - Data is replicated and distributed across multiple regions.
+ - Employs **NoSQL databases (like DynamoDB)** for high availability.
+ - Uses **load balancing and failover** for reliability.
 - **Goal:** Always available, even during server or regional outages.
 
 ### **C. Netflix Streaming**
 
 - **Challenge:** Streams billions of hours of video to users globally.
 - **Distributed Design:**
-    - Uses **Content Delivery Networks (CDNs)** to serve content from servers nearest to the user.
-    - Employs **microservices** — separate services for recommendations, billing, streaming, etc.
-    - Stores massive metadata and user data in **Cassandra** for scalability and fault tolerance.
-    - Auto-scales using **AWS cloud infrastructure** to meet changing traffic demands.
+ - Uses **Content Delivery Networks (CDNs)** to serve content from servers nearest to the user.
+ - Employs **microservices** — separate services for recommendations, billing, streaming, etc.
+ - Stores massive metadata and user data in **Cassandra** for scalability and fault tolerance.
+ - Auto-scales using **AWS cloud infrastructure** to meet changing traffic demands.
 - **Goal:** Smooth playback, minimal buffering, and uninterrupted availability.

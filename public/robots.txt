@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://big-data-survival-guide.vercel.app/sitemap.xml

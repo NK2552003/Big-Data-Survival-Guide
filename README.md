@@ -25,15 +25,15 @@ This repository is like your study buddy who actually did the homework (shocking
 
 ```
 Big Data Analytics Notes/
-├── README.md                    # This awesome file you're reading!
-├── Syllabus_Outline.md         # Your GPS for this course journey
-├── Big Data ( Full Course)/     # Where the magic (and suffering) happens
-└── UNITS/                       # Academic stuff (the "serious" part)
-    ├── UNIT 1/                  # "Hello World" of Big Data
-    ├── UNIT 2/                  # Mining streams (not the Netflix kind)
-    ├── UNIT 3/                  # Hadoop - sounds like "Had enough"
-    ├── UNIT 4/                  # Pig, Hive, HBase - it's a zoo!
-    └── UNIT 5/                  # Crystal ball predictions
+├── README.md # This awesome file you're reading!
+├── Syllabus_Outline.md # Your GPS for this course journey
+├── Big Data ( Full Course)/ # Where the magic (and suffering) happens
+└── UNITS/ # Academic stuff (the "serious" part)
+ ├── UNIT 1/ # "Hello World" of Big Data
+ ├── UNIT 2/ # Mining streams (not the Netflix kind)
+ ├── UNIT 3/ # Hadoop - sounds like "Had enough"
+ ├── UNIT 4/ # Pig, Hive, HBase - it's a zoo!
+ └── UNIT 5/ # Crystal ball predictions
 ```
 
 ---
@@ -43,8 +43,9 @@ Big Data Analytics Notes/
 
 ### For Students (aka Future Data Scientists)
 1. **Start Here:** Read [Syllabus_Outline.md](Syllabus_Outline.md) - it's like a movie trailer but for coursework!
-2. **Academic Study:** Navigate to [UNITS/](UNITS/) - where theory lives and thrives (Recommanded_- you should learn from *-*-fun.md files, it will be easy for you to understand)
-3. **Practical Learning:** Dive into [Big Data ( Full Course)/](Big%20Data%20(%20Full%20Course)/) - warning: may cause excessive caffeine consumption
+2. **Academic Study:** Navigate to [UNITS/](UNITS/) - where theory lives and thrives
+ `Recommanded:- you should learn from *-*-fun.md files, it will be easy for you to understand`
+4. **Practical Learning:** Dive into [Big Data ( Full Course)/](Big%20Data%20(%20Full%20Course)/) - warning: may cause excessive caffeine consumption
 
 ### For Exam Preparation (Panic Mode Activated!)
 1. **Theory:** UNITS/ folder is your best friend (better than your actual best friend during exams)
@@ -167,22 +168,22 @@ Your hands-on journey through digital chaos:
 *"The 'I want to have my cake and eat it too' approach"*
 ```
 Week 1-2: UNITS/UNIT 1-2 + Fundamentals/ 
-         (Gentle introduction, like a warm hug)
-         
+ (Gentle introduction, like a warm hug)
+
 Week 3-4: UNITS/UNIT 3 + Installation/ + Hadoop/
-         (Reality hits hard, coffee consumption spikes)
-         
+ (Reality hits hard, coffee consumption spikes)
+
 Week 5-6: UNITS/UNIT 4-5 + Spark/ + Analytics
-         (The 'I think I'm getting this' phase)
-         
+ (The 'I think I'm getting this' phase)
+
 Week 7-8: Practice/ + Review + Exam preparation
-         (Panic mode: ACTIVATED)
+ (Panic mode: ACTIVATED)
 ```
 *Side effects may include: sudden understanding of distributed systems, urge to explain MapReduce at parties*
 
 ---
 
-## Key Features ✨
+## Key Features 
 *"What makes this repository better than that one folder on your desktop named 'New Folder (37)'"*
 
 ### Multiple Learning Formats

@@ -27,11 +27,11 @@ Converting raw data into foresight lets businesses shift from reactive firefight
 ### Core components
 1. **Data collection**: Gathering datasets from multiple sources such as CRM systems, IoT sensor feeds, transaction logs, and social media APIs. Data may be structured (tables), semi‑structured (JSON) or unstructured (text).
 2. **Data preparation & feature engineering**: Cleaning (handling missing values, removing duplicates) and transforming raw inputs into features that a model can digest. Examples:
-   - Lagged features in time series (e.g., sales
+ - Lagged features in time series (e.g., sales
 t−1).
-   - Polynomial terms ($x^2$, $x^3$) to capture curvature.
-   - One‑hot encoding of categorical variables (e.g., day of week).
-   - Aggregates such as rolling averages or counts within a window.
+ - Polynomial terms ($x^2$, $x^3$) to capture curvature.
+ - One‑hot encoding of categorical variables (e.g., day of week).
+ - Aggregates such as rolling averages or counts within a window.
 3. **Model selection**: Choosing from a menu of algorithms based on the problem type (regression vs classification) and data scale. Options include linear regression, logistic regression, decision trees, random forests, gradient boosting, support vector machines, or deep neural networks.
 4. **Training and validation**: Splitting data into training, validation and test sets. Employing techniques such as k‑fold cross‑validation to tune hyperparameters and avoid overfitting. Measuring performance with metrics appropriate to the task (e.g., RMSE for regression, ROC‑AUC for binary classification).
 5. **Deployment**: Packaging the trained model for production. This may involve exporting to a model registry, providing a REST API (e.g., via Flask or FastAPI), running batch scoring jobs, or embedding the model within an application.
@@ -87,11 +87,11 @@ Under the Gauss–Markov theorem, these estimators are the best linear unbiased 
 ### Diagnostic plots
 ```mermaid
 flowchart LR
-    Data[Data points] --> Fit[Fit line]
-    Fit --> Residuals[Residual analysis]
-    Residuals -->|Check| Homosced.
-    Residuals -->|Check| Normality
-    Residuals -->|Check| Independence
+ Data[Data points] --> Fit[Fit line]
+ Fit --> Residuals[Residual analysis]
+ Residuals -->|Check| Homosced.
+ Residuals -->|Check| Normality
+ Residuals -->|Check| Independence
 ```
 
 Residual analysis may include plotting residuals against fitted values, a Q–Q plot, and looking for patterns that violate assumptions.
@@ -171,12 +171,12 @@ Each coefficient $\beta_j$ represents the expected change in $y$ for a one‑uni
 ### Example
 A housing price model built from a dataset of 5,000 properties uses predictors:
 
-| Predictor         | Description                |
+| Predictor | Description |
 |------------------|----------------------------|
-| $x_1$            | Size (m²)                  |
-| $x_2$            | Number of bedrooms         |
-| $x_3$            | Age of building (years)    |
-| $x_4$            | Distance to city centre (km)|
+| $x_1$ | Size (m²) |
+| $x_2$ | Number of bedrooms |
+| $x_3$ | Age of building (years) |
+| $x_4$ | Distance to city centre (km)|
 
 After fitting, the model is:
 
@@ -229,12 +229,12 @@ Because different predictors often use different units and scales, it is common 
 
 ### Statistical significance and uncertainty
 - **t‑test:** For each coefficient, compute
-  $$t_j = \frac{\hat{\beta}_j}{\text{SE}(\hat{\beta}_j)}$$
-  to test the null hypothesis $H_0: \beta_j = 0$ (no effect).
+ $$t_j = \frac{\hat{\beta}_j}{\text{SE}(\hat{\beta}_j)}$$
+ to test the null hypothesis $H_0: \beta_j = 0$ (no effect).
 - **p‑value:** The probability of observing a $t$ statistic at least as extreme as the one obtained, assuming $H_0$ is true. Conventionally, $p < 0.05$ denotes statistical significance.
 - **Confidence interval (CI):** A 95 % CI for $\beta_j$ is
-  $$\hat{\beta}_j \pm t_{\alpha/2, n-p-1} \cdot \text{SE}(\hat{\beta}_j).$$
-  If the interval excludes zero, the coefficient is significant at the chosen level.
+ $$\hat{\beta}_j \pm t_{\alpha/2, n-p-1} \cdot \text{SE}(\hat{\beta}_j).$$
+ If the interval excludes zero, the coefficient is significant at the chosen level.
 
 Always report coefficients with their standard errors and CIs; a large coefficient with enormous uncertainty may be misleading.
 
@@ -243,9 +243,9 @@ Categorical variables with $k$ levels are represented by $k-1$ binary dummy vari
 
 | Colour | D1 (Green) | D2 (Blue) |
 |--------|------------|------------|
-| Red    | 0          | 0          |
-| Green  | 1          | 0          |
-| Blue   | 0          | 1          |
+| Red | 0 | 0 |
+| Green | 1 | 0 |
+| Blue | 0 | 1 |
 
 The coefficients for D1 and D2 measure the difference in the response relative to the reference category (Red).
 
@@ -260,11 +260,11 @@ Interpretation: for a one‑unit increase in $x_1$, $y$ changes by $\beta_1 + \b
 > **Practical tip:** Visualise interactions by plotting predicted $y$ against $x_1$ for several fixed values of $x_2$.
 
 ### Example summary table
-| Coefficient | Estimate | Std. Error | t value | p value | 95 % CI               |
+| Coefficient | Estimate | Std. Error | t value | p value | 95 % CI |
 |-------------|----------|------------|---------|---------|-----------------------|
-| Intercept   | 50,000   | 2,000      | 25.0    | <0.001  | [46,000, 54,000]      |
-| Size        | 120      | 5          | 24.0    | <0.001  | [110, 130]            |
-| Age         | -8,000   | 1,200      | -6.67   | <0.001  | [-10,400, -5,600]     |
+| Intercept | 50,000 | 2,000 | 25.0 | <0.001 | [46,000, 54,000] |
+| Size | 120 | 5 | 24.0 | <0.001 | [110, 130] |
+| Age | -8,000 | 1,200 | -6.67 | <0.001 | [-10,400, -5,600] |
 
 Accompany tables with plots of coefficient estimates with error bars for visual clarity.
 
@@ -294,17 +294,17 @@ Graphical displays make model behaviour and data structure tangible, aiding both
 
 ```mermaid
 flowchart TB
-    subgraph Data
-      S[Sample points]
-    end
-    subgraph Model
-      L[Fitted line]
-      R[Residuals]
-    end
-    S --> L
-    L --> R
-    R -->|Diagnostic| Q[Q-Q]
-    R -->|Diagnostic| C[Cook's]
+ subgraph Data
+ S[Sample points]
+ end
+ subgraph Model
+ L[Fitted line]
+ R[Residuals]
+ end
+ S --> L
+ L --> R
+ R -->|Diagnostic| Q[Q-Q]
+ R -->|Diagnostic| C[Cook's]
 ```
 
 ### Tools and example code
@@ -421,12 +421,12 @@ Interactivity empowers users to probe datasets and model outputs intuitively, of
 
 ```mermaid
 flowchart LR
-    User[User actions]
-    -->|brush| Plot1
-    -->|brush| Plot2
-    Plot1 -->|link| Plot2
-    User -->|zoom| Plot1
-    User -->|slider| Model
+ User[User actions]
+ -->|brush| Plot1
+ -->|brush| Plot2
+ Plot1 -->|link| Plot2
+ User -->|zoom| Plot1
+ User -->|slider| Model
 ```
 
 ### Interaction example
@@ -453,9 +453,9 @@ Predictive analytics is supported by end‑to‑end systems that ingest, store, 
 1. **Data sources:** internal databases (CRM, ERP), IoT sensors (temperature, vibration), logs, and third‑party APIs (weather, social media).
 2. **Ingestion and ETL/ELT:** Tools like **Kafka**, **NiFi**, **Airflow**, **Fivetran**, and custom scripts move raw data into storage. Real‑time systems may use Kafka or Kinesis, while batch jobs run on schedule.
 3. **Storage:** A mix of technologies may be used:
-   - Data lakes (Amazon S3, HDFS) for raw and semi‑structured data.
-   - Data warehouses (Snowflake, Redshift, BigQuery) for structured, analytics‑ready data.
-   - Feature stores (Feast, Tecton) for serving model features consistently.
+ - Data lakes (Amazon S3, HDFS) for raw and semi‑structured data.
+ - Data warehouses (Snowflake, Redshift, BigQuery) for structured, analytics‑ready data.
+ - Feature stores (Feast, Tecton) for serving model features consistently.
 4. **Computation and model training:** Batch frameworks (Spark MLlib, scikit‑learn on distributed clusters) or GPU‑based training for deep learning (TensorFlow, PyTorch). Notebooks (Jupyter, Colab) aid exploration.
 5. **Model management and MLOps:** Version control of models and data, experiment tracking, automated retraining pipelines. Tools include **MLflow**, **Kubeflow**, **Seldon**, and **DVC**. Monitoring tracks input data drift and prediction quality to trigger retraining.
 6. **Serving and deployment:** Models are deployed as REST/gRPC microservices, serverless functions, or embedded in applications. Low‑latency scoring may use model servers (TensorFlow Serving, TorchServe) or batch inference jobs.
@@ -463,12 +463,12 @@ Predictive analytics is supported by end‑to‑end systems that ingest, store, 
 
 ```mermaid
 flowchart LR
-    Src[Data Sources]
-    --> Ingest[Kafka/ETL]
-    --> Store[Lake/Warehouse]
-    --> Train[Training cluster]
-    --> Model[Model Registry]
-    --> Serve[API/Dashboard]
+ Src[Data Sources]
+ --> Ingest[Kafka/ETL]
+ --> Store[Lake/Warehouse]
+ --> Train[Training cluster]
+ --> Model[Model Registry]
+ --> Serve[API/Dashboard]
 ```
 
 ### Example applications

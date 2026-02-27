@@ -143,23 +143,23 @@ Below are the most important tools built around Hadoop:
 1. **Ingestion**: Data comes from logs, databases, IoT, streams — via Sqoop, Kafka, Flume.
 2. **Storage**: Lands in HDFS or HBase.
 3. **Processing**:
-    - Batch via MapReduce, Hive, Spark
-    - Real-time via Spark Streaming or Kafka
+ - Batch via MapReduce, Hive, Spark
+ - Real-time via Spark Streaming or Kafka
 4. **Querying**:
-    - Interactive using Hive, Drill, Presto
+ - Interactive using Hive, Drill, Presto
 5. **Analytics**:
-    - Results passed to BI tools or ML workflows
+ - Results passed to BI tools or ML workflows
 6. **Scheduling/Workflow**:
-    - Jobs chained using Oozie or Airflow
+ - Jobs chained using Oozie or Airflow
 
 ## 7. Hadoop Version Story
 
 - **Hadoop 1.x**: Only MapReduce, tightly coupled with HDFS. Limited scalability.
 - **Hadoop 2.x**: YARN introduced. New processing frameworks.
 - **Hadoop 3.x**:
-    - Erasure coding (storage efficiency)
-    - Intra-datanode redundancy
-    - Better scalability
+ - Erasure coding (storage efficiency)
+ - Intra-datanode redundancy
+ - Better scalability
 
 ## 8. Strengths of Hadoop Ecosystem
 

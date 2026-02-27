@@ -36,11 +36,11 @@ Big Data platform wo environment hai jahan data store, manage aur analyze kiya j
 
 ```mermaid
 flowchart LR
-    A["Data Sources"] --> B["Ingestion: Kafka, Flume"];
-    B --> C["Distributed Storage: HDFS, S3"];
-    C --> D["Processing: Spark, MapReduce"];
-    D --> E["Analytics and BI Tools"];
-    E --> F["Users and Applications"];
+ A["Data Sources"] --> B["Ingestion: Kafka, Flume"];
+ B --> C["Distributed Storage: HDFS, S3"];
+ C --> D["Processing: Spark, MapReduce"];
+ D --> E["Analytics and BI Tools"];
+ E --> F["Users and Applications"];
 ```
 
 > **Real World Use:** Netflix apne user activity logs ko HDFS me store karta aur Spark se process karke movies recommend karta.

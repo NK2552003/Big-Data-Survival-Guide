@@ -12,8 +12,8 @@
 9. [Decaying Window](#9-decaying-window)
 10. [RTAP Applications](#10-rtap-applications)
 11. [Case Studies](#11-case-studies)
-   - [Sentiment Analysis](#sentiment-analysis)
-   - [Stock Market Predictions](#stock-market-predictions)
+ - [Sentiment Analysis](#sentiment-analysis)
+ - [Stock Market Predictions](#stock-market-predictions)
 
 ---
 
@@ -27,7 +27,7 @@ Stream ko sequence maana jata hai. Sources -> ingestion (Kafka) -> processors (S
 
 ```mermaid
 flowchart LR
-    Src[Source] --> Ingest[Kafka/Ingestion] --> Proc[Processor] --> Store[Storage] --> Sink[Dashboard/Sink]
+ Src[Source] --> Ingest[Kafka/Ingestion] --> Proc[Processor] --> Store[Storage] --> Sink[Dashboard/Sink]
 ```
 
 ## 3. Stream Computing

@@ -1,11 +1,11 @@
 # Grafana Installation Guide
 
-## 📋 Overview
+## Overview
 Grafana is an open-source analytics and interactive visualization platform. This guide covers installation across different operating systems and setup configurations.
 
 ---
 
-## 🐧 Linux Installation (Ubuntu/Debian)
+## Linux Installation (Ubuntu/Debian)
 
 ### Method 1: Using APT Repository (Recommended)
 
@@ -43,7 +43,7 @@ sudo dpkg -i grafana_10.3.0_amd64.deb
 
 ---
 
-## 🍎 macOS Installation
+## macOS Installation
 
 ### Method 1: Using Homebrew (Recommended)
 ```bash
@@ -65,7 +65,7 @@ cd grafana-10.3.0
 
 ---
 
-## 🪟 Windows Installation
+## Windows Installation
 
 ### Method 1: Using Chocolatey
 ```powershell
@@ -81,7 +81,7 @@ choco install grafana
 
 ---
 
-## 🐳 Docker Installation
+## Docker Installation
 
 ### Quick Start
 ```bash
@@ -96,34 +96,34 @@ docker volume create grafana-storage
 
 # Run with persistent volume
 docker run -d \
-  -p 3000:3000 \
-  --name=grafana \
-  -v grafana-storage:/var/lib/grafana \
-  grafana/grafana-oss:latest
+ -p 3000:3000 \
+ --name=grafana \
+ -v grafana-storage:/var/lib/grafana \
+ grafana/grafana-oss:latest
 ```
 
 ### Using Docker Compose
 ```yaml
 version: '3.8'
 services:
-  grafana:
-    image: grafana/grafana-oss:latest
-    container_name: grafana
-    restart: unless-stopped
-    ports:
-      - '3000:3000'
-    volumes:
-      - grafana-storage:/var/lib/grafana
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin123
+ grafana:
+ image: grafana/grafana-oss:latest
+ container_name: grafana
+ restart: unless-stopped
+ ports:
+ - '3000:3000'
+ volumes:
+ - grafana-storage:/var/lib/grafana
+ environment:
+ - GF_SECURITY_ADMIN_PASSWORD=admin123
 
 volumes:
-  grafana-storage:
+ grafana-storage:
 ```
 
 ---
 
-## ⚙️ Service Management
+## Service Management
 
 ### Linux (systemd)
 ```bash
@@ -166,7 +166,7 @@ brew services restart grafana
 
 ---
 
-## 🌐 Initial Setup & Access
+## Initial Setup & Access
 
 ### Default Access
 - **URL:** `http://localhost:3000`
@@ -181,7 +181,7 @@ brew services restart grafana
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Main Configuration File Locations
 - **Linux:** `/etc/grafana/grafana.ini`
@@ -213,7 +213,7 @@ from_address = your-email@gmail.com
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -249,7 +249,7 @@ sudo grafana-server -config /etc/grafana/grafana.ini test
 
 ---
 
-## 📊 Next Steps
+## Next Steps
 
 After installation:
 
@@ -261,7 +261,7 @@ After installation:
 
 ---
 
-## 🔗 Useful Links
+## Useful Links
 
 - [Grafana Official Documentation](https://grafana.com/docs/)
 - [Grafana Community Dashboards](https://grafana.com/grafana/dashboards/)
@@ -270,7 +270,7 @@ After installation:
 
 ---
 
-## 📋 Quick Commands Reference
+## Quick Commands Reference
 
 ```bash
 # Installation verification

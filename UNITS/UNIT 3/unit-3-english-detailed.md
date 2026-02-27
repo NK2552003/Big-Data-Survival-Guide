@@ -36,12 +36,12 @@ Hadoop originated from two papers published by Google in 2003: the GFS (Google F
 
 ```mermaid
 timeline
-    2003 : GFS and MapReduce papers published
-    2005 : Hadoop top-level project
-    2006 : Yahoo! adoption
-    2011 : Hadoop 1.0 release
-    2013 : Hadoop 2/YARN
-    2017 : Spark on YARN
+ 2003 : GFS and MapReduce papers published
+ 2005 : Hadoop top-level project
+ 2006 : Yahoo! adoption
+ 2011 : Hadoop 1.0 release
+ 2013 : Hadoop 2/YARN
+ 2017 : Spark on YARN
 ```
 
 ## 2. Hadoop Distributed File System (HDFS)
@@ -64,13 +64,13 @@ Additional aspects:
 
 ```mermaid
 flowchart LR
-    Client --> NameNode
-    Client --> DataNode1
-    Client --> DataNode2
-    Client --> DataNode3
-    NameNode -->|metadata| DataNode1
-    NameNode -->|metadata| DataNode2
-    NameNode -->|metadata| DataNode3
+ Client --> NameNode
+ Client --> DataNode1
+ Client --> DataNode2
+ Client --> DataNode3
+ NameNode -->|metadata| DataNode1
+ NameNode -->|metadata| DataNode2
+ NameNode -->|metadata| DataNode3
 ```
 
 > **Example:** A 1 TB file will be split into ~8192 blocks (assuming 128 MB). With a replication factor of 3, 24 TB of storage is consumed across the cluster. If a DataNode storing some blocks crashes, the NameNode automatically schedules new replicas on other healthy nodes.
@@ -95,15 +95,15 @@ Beyond these, a rich ecosystem has grown around Hadoop:
 
 ```mermaid
 graph LR
-    HDFS --> YARN
-    YARN --> MapReduce
-    YARN --> Spark
-    HDFS --> HBase
-    Sqoop --> HDFS
-    Flume --> HDFS
-    Hive --> MapReduce
-    Pig --> MapReduce
-    Zookeeper -->|coord| HBase
+ HDFS --> YARN
+ YARN --> MapReduce
+ YARN --> Spark
+ HDFS --> HBase
+ Sqoop --> HDFS
+ Flume --> HDFS
+ Hive --> MapReduce
+ Pig --> MapReduce
+ Zookeeper -->|coord| HBase
 ```
 ## 4. Analyzing Data with Hadoop
 
@@ -120,11 +120,11 @@ The emphasis is on **throughput and scalability**: jobs may take minutes or hour
 
 ```mermaid
 flowchart LR
-    Orders[Order Logs] --> HDFS
-    Analyst --> HiveQL
-    HiveQL --> YARN
-    YARN -->|runs| MapReduce
-    MapReduce --> HDFS[Output Table]
+ Orders[Order Logs] --> HDFS
+ Analyst --> HiveQL
+ HiveQL --> YARN
+ YARN -->|runs| MapReduce
+ MapReduce --> HDFS[Output Table]
 ```
 ## 5. Scaling Out
 
@@ -140,9 +140,9 @@ Performance tends to scale until another bottleneck appears (e.g., network bandw
 
 ```mermaid
 graph LR
-    Node1[Node 1] --> Cluster[Hadoop Cluster]
-    Node2[Node 2] --> Cluster
-    Node3[Node 3] --> Cluster
+ Node1[Node 1] --> Cluster[Hadoop Cluster]
+ Node2[Node 2] --> Cluster
+ Node3[Node 3] --> Cluster
 ```
 ## 6. Hadoop Streaming
 
@@ -152,10 +152,10 @@ Usage example:
 
 ```bash
 hadoop jar /path/to/hadoop-streaming.jar \
-  -input /logs/* \
-  -output /output \
-  -mapper "python mapper.py" \
-  -reducer "python reducer.py"
+ -input /logs/* \
+ -output /output \
+ -mapper "python mapper.py" \
+ -reducer "python reducer.py"
 ```
 
 The `mapper.py` script reads lines of input, processes them, and emits `key\tvalue` pairs. `reducer.py` reads sorted key/value pairs and performs aggregation. Streaming is useful for rapid prototyping or when existing codebases in other languages need to be leveraged.
@@ -174,19 +174,19 @@ The master is a single point of failure in Hadoop 1; Hadoop 2 introduced high-a
 
 ```mermaid
 flowchart LR
-    subgraph Master
-      NN[NameNode]
-      SNN[Secondary NameNode]
-    end
-    subgraph Slaves
-      DN1[DataNode1]
-      DN2[DataNode2]
-      DN3[DataNode3]
-    end
-    NN --> DN1
-    NN --> DN2
-    NN --> DN3
-    SNN --> NN
+ subgraph Master
+ NN[NameNode]
+ SNN[Secondary NameNode]
+ end
+ subgraph Slaves
+ DN1[DataNode1]
+ DN2[DataNode2]
+ DN3[DataNode3]
+ end
+ NN --> DN1
+ NN --> DN2
+ NN --> DN3
+ SNN --> NN
 ```
 ## 8. Java Interfaces to HDFS Basics
 
@@ -209,7 +209,7 @@ in.close();
 // list directory
 FileStatus[] statuses = fs.listStatus(new Path("/user/data"));
 for (FileStatus status : statuses) {
-    System.out.println(status.getPath());
+ System.out.println(status.getPath());
 }
 ```
 
@@ -234,48 +234,48 @@ Testing MapReduce jobs locally can be done using the `LocalJobRunner` by setting
 
 ```java
 public class WordCount {
-  public static class TokenizerMapper
-       extends Mapper<Object, Text, Text, IntWritable>{
-    private final static IntWritable one = new IntWritable(1);
-    private Text word = new Text();
-    public void map(Object key, Text value, Context context
-                    ) throws IOException, InterruptedException {
-      StringTokenizer itr = new StringTokenizer(value.toString());
-      while (itr.hasMoreTokens()) {
-        word.set(itr.nextToken());
-        context.write(word, one);
-      }
-    }
-  }
+ public static class TokenizerMapper
+ extends Mapper<Object, Text, Text, IntWritable>{
+ private final static IntWritable one = new IntWritable(1);
+ private Text word = new Text();
+ public void map(Object key, Text value, Context context
+ ) throws IOException, InterruptedException {
+ StringTokenizer itr = new StringTokenizer(value.toString());
+ while (itr.hasMoreTokens()) {
+ word.set(itr.nextToken());
+ context.write(word, one);
+ }
+ }
+ }
 
-  public static class IntSumReducer
-       extends Reducer<Text,IntWritable,Text,IntWritable> {
-    private IntWritable result = new IntWritable();
-    public void reduce(Text key, Iterable<IntWritable> values,
-                       Context context
-                       ) throws IOException, InterruptedException {
-      int sum = 0;
-      for (IntWritable val : values) {
-        sum += val.get();
-      }
-      result.set(sum);
-      context.write(key, result);
-    }
-  }
+ public static class IntSumReducer
+ extends Reducer<Text,IntWritable,Text,IntWritable> {
+ private IntWritable result = new IntWritable();
+ public void reduce(Text key, Iterable<IntWritable> values,
+ Context context
+ ) throws IOException, InterruptedException {
+ int sum = 0;
+ for (IntWritable val : values) {
+ sum += val.get();
+ }
+ result.set(sum);
+ context.write(key, result);
+ }
+ }
 
-  public static void main(String[] args) throws Exception {
-    Configuration conf = new Configuration();
-    Job job = Job.getInstance(conf, "word count");
-    job.setJarByClass(WordCount.class);
-    job.setMapperClass(TokenizerMapper.class);
-    job.setCombinerClass(IntSumReducer.class);
-    job.setReducerClass(IntSumReducer.class);
-    job.setOutputKeyClass(Text.class);
-    job.setOutputValueClass(IntWritable.class);
-    FileInputFormat.addInputPath(job, new Path(args[0]));
-    FileOutputFormat.setOutputPath(job, new Path(args[1]));
-    System.exit(job.waitForCompletion(true) ? 0 : 1);
-  }
+ public static void main(String[] args) throws Exception {
+ Configuration conf = new Configuration();
+ Job job = Job.getInstance(conf, "word count");
+ job.setJarByClass(WordCount.class);
+ job.setMapperClass(TokenizerMapper.class);
+ job.setCombinerClass(IntSumReducer.class);
+ job.setReducerClass(IntSumReducer.class);
+ job.setOutputKeyClass(Text.class);
+ job.setOutputValueClass(IntWritable.class);
+ FileInputFormat.addInputPath(job, new Path(args[0]));
+ FileOutputFormat.setOutputPath(job, new Path(args[1]));
+ System.exit(job.waitForCompletion(true) ? 0 : 1);
+ }
 }
 ```
 
@@ -305,17 +305,17 @@ A MapReduce job passes through the following stages:
 
 ```mermaid
 sequenceDiagram
-    participant Client
-    participant RM as ResourceManager
-    participant AM as AppMaster
-    participant NM as NodeManager
-    Client->>RM: submit job
-    RM->>AM: start application
-    AM->>NM: assign map task
-    NM-->>AM: task status
-    AM->>NM: assign reduce task
-    NM-->>AM: task status
-    NM->>HDFS: write output
+ participant Client
+ participant RM as ResourceManager
+ participant AM as AppMaster
+ participant NM as NodeManager
+ Client->>RM: submit job
+ RM->>AM: start application
+ AM->>NM: assign map task
+ NM-->>AM: task status
+ AM->>NM: assign reduce task
+ NM-->>AM: task status
+ NM->>HDFS: write output
 ```
 
 ## 12. Failures
@@ -352,10 +352,10 @@ This phase is often the most expensive due to network IO; optimizations include 
 
 ```mermaid
 graph LR
-    M1[Map1] -->|part0| R1[Reduce1]
-    M1 -->|part1| R2[Reduce2]
-    M2[Map2] -->|part0| R1
-    M2 -->|part1| R2
+ M1[Map1] -->|part0| R1[Reduce1]
+ M1 -->|part1| R2[Reduce2]
+ M2[Map2] -->|part0| R1
+ M2 -->|part1| R2
 ```
 ## 15. Task Execution
 

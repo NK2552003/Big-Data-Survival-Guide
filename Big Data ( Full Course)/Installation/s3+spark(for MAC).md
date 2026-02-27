@@ -38,7 +38,7 @@ Spark automatically picks these credentials.
 
 # **3. Download S3 Connector JARs**
 
-⚠️ **IMPORTANT:** Spark 4.0.1 uses Hadoop 3.4.1, so you need **matching versions** of the JARs.
+ **IMPORTANT:** Spark 4.0.1 uses Hadoop 3.4.1, so you need **matching versions** of the JARs.
 
 Create a directory for JARs in Spark's installation:
 
@@ -184,4 +184,4 @@ spark.read.text("s3a://your-bucket-name/file.txt").show()
 
 ---
 
-**Installation complete! Test your connection with the examples above.** 🚀
+**Installation complete! Test your connection with the examples above.** 

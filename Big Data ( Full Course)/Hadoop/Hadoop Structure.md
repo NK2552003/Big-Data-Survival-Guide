@@ -15,13 +15,13 @@ Then the folder structure looks something like this:
 ├── bin
 ├── sbin
 ├── etc
-│   └── hadoop
+│ └── hadoop
 ├── share
-│   └── hadoop
-│       ├── common
-│       ├── hdfs
-│       ├── mapreduce
-│       └── yarn
+│ └── hadoop
+│ ├── common
+│ ├── hdfs
+│ ├── mapreduce
+│ └── yarn
 ├── lib
 ├── logs
 └── tmp
@@ -175,8 +175,8 @@ If you configured this directory in `core-site.xml`:
 
 ```xml
 <property>
-   <name>hadoop.tmp.dir</name>
-   <value>/usr/local/hadoop/tmp</value>
+ <name>hadoop.tmp.dir</name>
+ <value>/usr/local/hadoop/tmp</value>
 </property>
 ```
 
@@ -190,13 +190,13 @@ Example entries in your config:
 
 ```xml
 <property>
-  <name>dfs.namenode.name.dir</name>
-  <value>file:///usr/local/hadoop/data/namenode</value>
+ <name>dfs.namenode.name.dir</name>
+ <value>file:///usr/local/hadoop/data/namenode</value>
 </property>
 
 <property>
-  <name>dfs.datanode.data.dir</name>
-  <value>file:///usr/local/hadoop/data/datanode</value>
+ <name>dfs.datanode.data.dir</name>
+ <value>file:///usr/local/hadoop/data/datanode</value>
 </property>
 ```
 
@@ -215,23 +215,23 @@ A distributed file system that lets you store large files across multiple machin
 **Key components:**
 
 - **NameNode (Master)**
-    
-    Stores metadata — file paths, permissions, block locations
-    
-    Think of it as a "file system manager"
-    
+
+ Stores metadata — file paths, permissions, block locations
+
+ Think of it as a "file system manager"
+
 - **Secondary NameNode**
-    
-    Assists NameNode by taking periodic snapshots of metadata
-    
-    Note: *Not a standby node; just used for checkpointing*
-    
+
+ Assists NameNode by taking periodic snapshots of metadata
+
+ Note: *Not a standby node; just used for checkpointing*
+
 - **DataNode (Worker)**
-    
-    Stores actual data blocks
-    
-    Each DataNode talks to the NameNode and serves read/write requests
-    
+
+ Stores actual data blocks
+
+ Each DataNode talks to the NameNode and serves read/write requests
+
 
 **What you can do:**
 
@@ -251,15 +251,15 @@ A cluster management layer that manages resources and schedules jobs.
 **Key components:**
 
 - **ResourceManager (Master)**
-    
-    Allocates resources to applications (like Spark or MapReduce jobs)
-    
+
+ Allocates resources to applications (like Spark or MapReduce jobs)
+
 - **NodeManager (Worker)**
-    
-    Runs on every node and manages resources for a single machine
-    
-    Communicates with ResourceManager
-    
+
+ Runs on every node and manages resources for a single machine
+
+ Communicates with ResourceManager
+
 
 **Why it’s important:**
 
@@ -331,21 +331,21 @@ SecondaryNameNode
 After installation, you get these commands available in `bin/`:
 
 - `hdfs` → Hadoop File System commands
-    
-    Example: `hdfs dfs -ls /`
-    
+
+ Example: `hdfs dfs -ls /`
+
 - `hadoop` → General Hadoop command wrapper
-    
-    Example: `hadoop version`
-    
+
+ Example: `hadoop version`
+
 - `yarn` → For submitting and managing YARN jobs
-    
-    Example: `yarn application -list`
-    
+
+ Example: `yarn application -list`
+
 - `mapred` → Commands for MapReduce jobs
-    
-    Example: `mapred job -status`
-    
+
+ Example: `mapred job -status`
+
 
 ## What You Can Do After Setup
 

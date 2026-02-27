@@ -21,7 +21,7 @@ Pig aur Hive Hadoop ke upar high-level tools hain. Pig Latin scripting language 
 ```pig
 logs = LOAD '/telecom/cdr/*' AS (user:chararray,duration:int);
 avg = FOREACH (GROUP logs BY user)
-       GENERATE group, AVG(logs.duration);
+ GENERATE group, AVG(logs.duration);
 STORE avg INTO '/telecom/analysis/avg_duration';
 ```
 
@@ -77,7 +77,7 @@ Cost-based optimization, vectorization, aur `EXPLAIN` performance tuning mein ma
 
 ```sql
 SELECT id, name,
-       ROW_NUMBER() OVER (PARTITION BY dt ORDER BY id) AS rn
+ ROW_NUMBER() OVER (PARTITION BY dt ORDER BY id) AS rn
 FROM users;
 ```
 

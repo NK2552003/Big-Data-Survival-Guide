@@ -35,12 +35,12 @@ Hadoop ki shuruat Google ke 2003 wale GFS (Google File System) aur MapReduce pap
 
 ```mermaid
 timeline
-    2003 : GFS aur MapReduce papers publish hue
-    2005 : Hadoop top-level project bana
-    2006 : Yahoo! adoption
-    2011 : Hadoop 1.0 release
-    2013 : Hadoop 2/YARN
-    2017 : Spark on YARN
+ 2003 : GFS aur MapReduce papers publish hue
+ 2005 : Hadoop top-level project bana
+ 2006 : Yahoo! adoption
+ 2011 : Hadoop 1.0 release
+ 2013 : Hadoop 2/YARN
+ 2017 : Spark on YARN
 ```
 
 ## 2. Hadoop Distributed File System (HDFS)
@@ -63,13 +63,13 @@ Additional aspects:
 
 ```mermaid
 flowchart LR
-    Client --> NameNode
-    Client --> DataNode1
-    Client --> DataNode2
-    Client --> DataNode3
-    NameNode -->|metadata| DataNode1
-    NameNode -->|metadata| DataNode2
-    NameNode -->|metadata| DataNode3
+ Client --> NameNode
+ Client --> DataNode1
+ Client --> DataNode2
+ Client --> DataNode3
+ NameNode -->|metadata| DataNode1
+ NameNode -->|metadata| DataNode2
+ NameNode -->|metadata| DataNode3
 ```
 
 > **Example:** 1 TB file ko agar 128 MB block size se split karein to ~8192 blocks milenge. 3 replication factor lene par cluster mein 24 TB storage lagta hai. Agar koi DataNode crash ho jaye jisme kuch blocks hain, NameNode automatically healthy nodes par naye replicas banata hai.
@@ -94,15 +94,15 @@ Ecosystem:
 
 ```mermaid
 graph LR
-    HDFS --> YARN
-    YARN --> MapReduce
-    YARN --> Spark
-    HDFS --> HBase
-    Sqoop --> HDFS
-    Flume --> HDFS
-    Hive --> MapReduce
-    Pig --> MapReduce
-    Zookeeper -->|coord| HBase
+ HDFS --> YARN
+ YARN --> MapReduce
+ YARN --> Spark
+ HDFS --> HBase
+ Sqoop --> HDFS
+ Flume --> HDFS
+ Hive --> MapReduce
+ Pig --> MapReduce
+ Zookeeper -->|coord| HBase
 ```
 
 ## 4. Data ka Vishleshan Hadoop se
@@ -120,11 +120,11 @@ Zyada focus **throughput aur scalability** par hota hai; jobs ki running time mi
 
 ```mermaid
 flowchart LR
-    Orders[Order Logs] --> HDFS
-    Analyst --> HiveQL
-    HiveQL --> YARN
-    YARN -->|runs| MapReduce
-    MapReduce --> HDFS[Output Table]
+ Orders[Order Logs] --> HDFS
+ Analyst --> HiveQL
+ HiveQL --> YARN
+ YARN -->|runs| MapReduce
+ MapReduce --> HDFS[Output Table]
 ```
 
 ## 5. Scaling Out
@@ -141,9 +141,9 @@ Network bandwidth ya NameNode metadata limits ke aane tak performance scale hoti
 
 ```mermaid
 graph LR
-    Node1[Node 1] --> Cluster[Hadoop Cluster]
-    Node2[Node 2] --> Cluster
-    Node3[Node 3] --> Cluster
+ Node1[Node 1] --> Cluster[Hadoop Cluster]
+ Node2[Node 2] --> Cluster
+ Node3[Node 3] --> Cluster
 ```
 
 ## 6. Hadoop Streaming
@@ -154,10 +154,10 @@ Usage:
 
 ```bash
 hadoop jar /path/to/hadoop-streaming.jar \
-  -input /logs/* \
-  -output /output \
-  -mapper "python mapper.py" \
-  -reducer "python reducer.py"
+ -input /logs/* \
+ -output /output \
+ -mapper "python mapper.py" \
+ -reducer "python reducer.py"
 ```
 
 Mapper script input lines padh ke `key\tvalue` pairs emit karta, reducer sorted pairs aggregate karta. Rapid prototyping ya existing code reuse ke liye streaming useful hai.
@@ -176,19 +176,19 @@ Hadoop 1 mein master single point of failure tha; Hadoop 2+ mein HA NameNode pa
 
 ```mermaid
 flowchart LR
-    subgraph Master
-      NN[NameNode]
-      SNN[Secondary NameNode]
-    end
-    subgraph Slaves
-      DN1[DataNode1]
-      DN2[DataNode2]
-      DN3[DataNode3]
-    end
-    NN --> DN1
-    NN --> DN2
-    NN --> DN3
-    SNN --> NN
+ subgraph Master
+ NN[NameNode]
+ SNN[Secondary NameNode]
+ end
+ subgraph Slaves
+ DN1[DataNode1]
+ DN2[DataNode2]
+ DN3[DataNode3]
+ end
+ NN --> DN1
+ NN --> DN2
+ NN --> DN3
+ SNN --> NN
 ```
 
 ## 8. Java Interfaces to HDFS Basics
@@ -212,7 +212,7 @@ in.close();
 // directory list
 FileStatus[] statuses = fs.listStatus(new Path("/user/data"));
 for (FileStatus status : statuses) {
-    System.out.println(status.getPath());
+ System.out.println(status.getPath());
 }
 ```
 
@@ -261,17 +261,17 @@ Job ke stages:
 
 ```mermaid
 sequenceDiagram
-    participant Client
-    participant RM as ResourceManager
-    participant AM as AppMaster
-    participant NM as NodeManager
-    Client->>RM: job submit kare
-    RM->>AM: application start kare
-    AM->>NM: map task assign
-    NM-->>AM: task status
-    AM->>NM: reduce task assign
-    NM-->>AM: task status
-    NM->>HDFS: output likhe
+ participant Client
+ participant RM as ResourceManager
+ participant AM as AppMaster
+ participant NM as NodeManager
+ Client->>RM: job submit kare
+ RM->>AM: application start kare
+ AM->>NM: map task assign
+ NM-->>AM: task status
+ AM->>NM: reduce task assign
+ NM-->>AM: task status
+ NM->>HDFS: output likhe
 ```
 
 ## 12. Failures
@@ -308,10 +308,10 @@ Network IO ke wajah se ye phase expensive hota; optimizations mein map outputs c
 
 ```mermaid
 graph LR
-    M1[Map1] -->|part0| R1[Reduce1]
-    M1 -->|part1| R2[Reduce2]
-    M2[Map2] -->|part0| R1
-    M2 -->|part1| R2
+ M1[Map1] -->|part0| R1[Reduce1]
+ M1 -->|part1| R2[Reduce2]
+ M2[Map2] -->|part0| R1
+ M2 -->|part1| R2
 ```
 
 ## 15. Task Execution

@@ -26,7 +26,7 @@ Streams are sequences of elements. Architectures include sources, ingestion (Kaf
 
 ```mermaid
 flowchart LR
-    Src[Source] --> Ingest[Kafka/Ingestion] --> Proc[Processor] --> Store[Storage] --> Sink[Dashboard/Sink]
+ Src[Source] --> Ingest[Kafka/Ingestion] --> Proc[Processor] --> Store[Storage] --> Sink[Dashboard/Sink]
 ```
 
 ### 3. Stream Computing

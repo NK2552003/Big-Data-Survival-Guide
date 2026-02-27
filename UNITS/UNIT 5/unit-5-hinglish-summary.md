@@ -55,9 +55,9 @@ Graphs se model ko asaani se samjha sakte:
 
 ```mermaid
 flowchart LR
-    Scatter --> Line
-    Line --> Residuals
-    Residuals --> QQ
+ Scatter --> Line
+ Line --> Residuals
+ Residuals --> QQ
 ```
 
 ## 6. Visual Data Analysis Techniques

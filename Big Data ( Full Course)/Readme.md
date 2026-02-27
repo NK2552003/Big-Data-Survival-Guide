@@ -196,10 +196,10 @@
 - [ ] Final: Validated *(Passed practice questions)*
 
 ### Key Milestones:
-**Milestone 1**: Successfully explain Big Data to someone else  
-**Milestone 2**: Upload and process a file in HDFS  
-**Milestone 3**: Run your first MapReduce job  
-**Milestone 4**: Build a Spark application  
+**Milestone 1**: Successfully explain Big Data to someone else 
+**Milestone 2**: Upload and process a file in HDFS 
+**Milestone 3**: Run your first MapReduce job 
+**Milestone 4**: Build a Spark application 
 **Milestone 5**: Set up monitoring dashboard
 
 
@@ -211,14 +211,14 @@
 
 #### Fundamentals
 - [What is Big Data](Fundamentals/What%20is%20Big%20Data.md)
-- [Big Data Ecosystem](Fundamentals/Big%20Data%20Ecosystem.md)  
+- [Big Data Ecosystem](Fundamentals/Big%20Data%20Ecosystem.md) 
 - [Data Engineering Fundamentals](Fundamentals/Data%20Engineering%20Fundamentals.md)
 - [Pre Topics](Fundamentals/Pre%20Topics.md)
 - [Linux Basics](Fundamentals/Linux%20Basics.md)
 
 #### Installation & Setup
 - [Hadoop Installation](Installation/Hadoop%20Installation.md)
-- [Hadoop Installation (for Mac)](Installation/Hadoop_Installation(for%20Mac).md)  
+- [Hadoop Installation (for Mac)](Installation/Hadoop_Installation(for%20Mac).md) 
 - [Hadoop Via Docker](Installation/Hadoop%20Via%20Docker.md)
 - [S3 + Spark (for MAC)](Installation/s3+spark(for%20MAC).md)
 
@@ -277,18 +277,18 @@
 
 ## FOLDER STRUCTURE
 
-```
+```tree
 Big Data ( Full Course)/
-├── Course Outline.md          # Course overview
-├── Readme.md                  # This guide (START HERE!)
-├── Fundamentals/              # Week 1: Core concepts
-├── Installation/               # Week 2: Setup guides  
-├── Hadoop/                    # Week 2-3: Hadoop deep dive
-├── Spark/                     # Week 4: Spark framework
-├── Monitoring/                # Week 4: Grafana & monitoring
-├── Cloud/                      # Week 4: AWS & cloud
-├── Practice/                  # Final: Test knowledge
-└── Scripts/                   # Helper automation
+├── Course Outline.md # Course overview
+├── Readme.md # This guide (START HERE!)
+├── Fundamentals/ # Week 1: Core concepts
+├── Installation/ # Week 2: Setup guides
+├── Hadoop/ # Week 2-3: Hadoop deep dive
+├── Spark/ # Week 4: Spark framework
+├── Monitoring/ # Week 4: Grafana & monitoring
+├── Cloud/ # Week 4: AWS & cloud
+├── Practice/ # Final: Test knowledge
+└── Scripts/ # Helper automation
 ```
 
 ---

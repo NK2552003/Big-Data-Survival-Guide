@@ -51,23 +51,23 @@ Replace `/home/hadoop/hadoop` below with your Hadoop root if different. Add thes
 
 ```jsx
 <property>
-  <name>mapreduce.framework.name</name>
-  <value>yarn</value>
+ <name>mapreduce.framework.name</name>
+ <value>yarn</value>
 </property>
 
 <property>
-  <name>yarn.app.mapreduce.am.env</name>
-  <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
+ <name>yarn.app.mapreduce.am.env</name>
+ <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
 </property>
 
 <property>
-  <name>mapreduce.map.env</name>
-  <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
+ <name>mapreduce.map.env</name>
+ <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
 </property>
 
 <property>
-  <name>mapreduce.reduce.env</name>
-  <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
+ <name>mapreduce.reduce.env</name>
+ <value>HADOOP_MAPRED_HOME=/home/hadoop/hadoop</value>
 </property>
 ```
 - For Mac

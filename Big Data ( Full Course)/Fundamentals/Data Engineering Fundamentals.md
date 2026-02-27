@@ -36,9 +36,9 @@ This is where:
 - Data pipelines
 - Spark jobs
 - Batch and streaming frameworks
-    
-    come into the picture.
-    
+
+ come into the picture.
+
 
 This stage is sometimes called the **staging zone**, **processing zone**, or **transformation zone**.
 

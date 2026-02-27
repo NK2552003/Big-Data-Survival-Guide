@@ -96,21 +96,21 @@ Linux organizes files in a **hierarchical directory structure**, starting from t
 
 ```
 /
-├── bin/        → Essential user binaries (commands)
-├── boot/       → Boot loader files (kernel, GRUB)
-├── dev/        → Device files
-├── etc/        → System configuration files
-├── home/       → Home directories of users
-├── lib/        → Shared libraries
-├── media/      → Mount points for removable devices
-├── mnt/        → Temporary mount points
-├── opt/        → Optional third-party software
-├── proc/       → System and process information
-├── root/       → Root user’s home directory
-├── sbin/       → System administration binaries
-├── tmp/        → Temporary files
-├── usr/        → User programs and utilities
-└── var/        → Variable files (logs, spool files)
+├── bin/ → Essential user binaries (commands)
+├── boot/ → Boot loader files (kernel, GRUB)
+├── dev/ → Device files
+├── etc/ → System configuration files
+├── home/ → Home directories of users
+├── lib/ → Shared libraries
+├── media/ → Mount points for removable devices
+├── mnt/ → Temporary mount points
+├── opt/ → Optional third-party software
+├── proc/ → System and process information
+├── root/ → Root user’s home directory
+├── sbin/ → System administration binaries
+├── tmp/ → Temporary files
+├── usr/ → User programs and utilities
+└── var/ → Variable files (logs, spool files)
 
 ```
 
@@ -218,11 +218,11 @@ sudo apt install git
 
 - **dpkg** – Low-level package manager for `.deb` files.
 - **snap** – Ubuntu’s modern package system for containerized applications.
-    
-    ```bash
-    sudo snap install code --classic
-    ```
-    
+
+ ```bash
+ sudo snap install code --classic
+ ```
+
 
 ## **7. Users and Groups**
 
@@ -348,27 +348,27 @@ Shell scripts automate tasks by running a series of commands.
 **Creating a Script:**
 
 1. Create a file:
-    
-    ```bash
-    nano backup.sh
-    ```
-    
+
+ ```bash
+ nano backup.sh
+ ```
+
 2. Add commands:
-    
-    ```bash
-    #!/bin/bash
-    echo "Starting backup..."
-    cp /home/user/Documents /mnt/backup/
-    echo "Backup complete."
-    ```
-    
+
+ ```bash
+ #!/bin/bash
+ echo "Starting backup..."
+ cp /home/user/Documents /mnt/backup/
+ echo "Backup complete."
+ ```
+
 3. Make it executable:
-    
-    ```bash
-    chmod +x backup.sh
-    ./backup.sh
-    ```
-    
+
+ ```bash
+ chmod +x backup.sh
+ ./backup.sh
+ ```
+
 
 **Script Features:**
 
@@ -400,12 +400,12 @@ Logs help diagnose issues and monitor system activities.
 - Use `sudo` responsibly.
 - Keep software updated.
 - Enable firewall:
-    
-    ```bash
-    sudo ufw enable
-    sudo ufw status
-    ```
-    
+
+ ```bash
+ sudo ufw enable
+ sudo ufw status
+ ```
+
 - Manage users with least privileges.
 
 **Updates:**

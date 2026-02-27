@@ -30,15 +30,15 @@ A genome sequencing project, for instance, may generate dozens of terabytes of r
 
 ```mermaid
 flowchart TB
-    Social[Social Media]
-    Logs[Machine Logs]
-    Trans[Transaction Systems]
-    Media[Multimedia]
-    Social -->|feeds| Platform
-    Logs -->|feeds| Platform
-    Trans -->|feeds| Platform
-    Media -->|feeds| Platform
-    Platform[Big Data Platform]
+ Social[Social Media]
+ Logs[Machine Logs]
+ Trans[Transaction Systems]
+ Media[Multimedia]
+ Social -->|feeds| Platform
+ Logs -->|feeds| Platform
+ Trans -->|feeds| Platform
+ Media -->|feeds| Platform
+ Platform[Big Data Platform]
 ```
 
 ### Characteristics (The 5 Vs)
@@ -48,11 +48,11 @@ flowchart TB
 2. **Velocity** – New data arrives quickly and sometimes must be acted upon instantaneously. Credit‑card processors evaluate transactions in milliseconds to block fraudulent charges. Sensor networks in smart cities stream readings every second to monitor traffic, air quality and utilities.
 
 3. **Variety** – Data comes in many forms:
-   - *Structured*: Fixed‑schema tables such as CSV or SQL databases.
-   - *Semi‑structured*: JSON, XML, or log files where records may have different fields.
-   - *Unstructured*: Text documents, emails, images, audio, and video.
+ - *Structured*: Fixed‑schema tables such as CSV or SQL databases.
+ - *Semi‑structured*: JSON, XML, or log files where records may have different fields.
+ - *Unstructured*: Text documents, emails, images, audio, and video.
 
-   A modern data lake often contains all three. For instance, an online retailer might store customer profiles in a relational database, activity logs in JSON, and product images and videos on an object store.
+ A modern data lake often contains all three. For instance, an online retailer might store customer profiles in a relational database, activity logs in JSON, and product images and videos on an object store.
 
 4. **Veracity** – Data quality is uneven. Sensor drift, duplicate entries, malicious inputs and spam all contribute to uncertainty. Poor veracity can lead to wrong conclusions; therefore, data validation, cleansing and provenance tracking are critical.
 
@@ -60,12 +60,12 @@ flowchart TB
 
 ```mermaid
 graph LR
-    V1[Volume]
-    V2[Velocity]
-    V3[Variety]
-    V4[Veracity]
-    V5[Value]
-    V1 --> V2 --> V3 --> V4 --> V5 --> V1
+ V1[Volume]
+ V2[Velocity]
+ V3[Variety]
+ V4[Veracity]
+ V5[Value]
+ V1 --> V2 --> V3 --> V4 --> V5 --> V1
 ```
 
 
@@ -80,59 +80,59 @@ To manage and analyse Big Data efficiently, organisations build platforms compos
 
 ```mermaid
 flowchart LR
-    subgraph Ingestion Layer
-        A[External Sources]
-        B[Message Queues]
-        C[Batch Uploads]
-    end
-    subgraph Storage Layer
-        D["Distributed File System (HDFS/S3)"]
-        E[NoSQL Databases]
-    end
-    subgraph Processing Layer
-        F["Batch Engines (MapReduce)"]
-        G["Stream Engines (Spark Streaming, Flink)"]
-    end
-    subgraph Query & Analysis Layer
-        H["SQL Engines (Hive, Presto)"]
-        I["ML Libraries (MLlib, TensorFlow)"]
-    end
-    subgraph Orchestration & Management
-        J["Workflow (Oozie/Airflow)"]
-        K["Resource Manager (YARN/Mesos)"]
-    end
+ subgraph Ingestion Layer
+ A[External Sources]
+ B[Message Queues]
+ C[Batch Uploads]
+ end
+ subgraph Storage Layer
+ D["Distributed File System (HDFS/S3)"]
+ E[NoSQL Databases]
+ end
+ subgraph Processing Layer
+ F["Batch Engines (MapReduce)"]
+ G["Stream Engines (Spark Streaming, Flink)"]
+ end
+ subgraph Query & Analysis Layer
+ H["SQL Engines (Hive, Presto)"]
+ I["ML Libraries (MLlib, TensorFlow)"]
+ end
+ subgraph Orchestration & Management
+ J["Workflow (Oozie/Airflow)"]
+ K["Resource Manager (YARN/Mesos)"]
+ end
 
-    A --> B --> D
-    C --> D
-    D --> F --> H
-    D --> G --> I
-    H --> Users
-    I --> Users
+ A --> B --> D
+ C --> D
+ D --> F --> H
+ D --> G --> I
+ H --> Users
+ I --> Users
 ```
 
 - **Distributed Storage**: Data is partitioned into blocks or objects and replicated across multiple nodes for fault tolerance and throughput. HDFS (Hadoop Distributed File System) stores data in 128 MB blocks; if a node fails, another replica serves the data. In cloud environments, object stores like Amazon S3 or Google Cloud Storage provide similar scaling and durability without managing the underlying hardware.
 
 - **Processing Frameworks**:
-  - *MapReduce* was the pioneering model, breaking jobs into map and reduce phases. Each phase runs parallel tasks across the cluster, writing intermediate results to disk.
-  - *Spark* introduced in‑memory computation, drastically reducing runtime for iterative algorithms. It supports multiple abstractions: RDDs, DataFrames, Datasets and GraphX for graph processing. Spark’s streaming API and structured streaming allow near‑real‑time processing.
-  - *Flink* and *Storm* focus on low-latency stream processing with event time semantics.
+ - *MapReduce* was the pioneering model, breaking jobs into map and reduce phases. Each phase runs parallel tasks across the cluster, writing intermediate results to disk.
+ - *Spark* introduced in‑memory computation, drastically reducing runtime for iterative algorithms. It supports multiple abstractions: RDDs, DataFrames, Datasets and GraphX for graph processing. Spark’s streaming API and structured streaming allow near‑real‑time processing.
+ - *Flink* and *Storm* focus on low-latency stream processing with event time semantics.
 
 - **Data Ingestion Tools**:
-  - *Kafka* is a distributed, partitioned log that retains messages for configurable periods. Producers write events to topics and consumers read them asynchronously.
-  - *Flume* specialises in high‑throughput log collection with built‑in sinks for HDFS or HBase.
-  - *NiFi* provides a GUI‑based dataflow engine with features for routing, transformation and back‑pressure management.
+ - *Kafka* is a distributed, partitioned log that retains messages for configurable periods. Producers write events to topics and consumers read them asynchronously.
+ - *Flume* specialises in high‑throughput log collection with built‑in sinks for HDFS or HBase.
+ - *NiFi* provides a GUI‑based dataflow engine with features for routing, transformation and back‑pressure management.
 
 - **Query Engines**:
-  - *Hive* translates SQL queries into MapReduce, Tez or Spark jobs, making it easier for analysts familiar with SQL to query big datasets.
-  - *Presto* (now Trino) and *Impala* are MPP (massively parallel processing) engines offering faster ad‑hoc query performance by keeping data in memory and bypassing the Hadoop stack.
+ - *Hive* translates SQL queries into MapReduce, Tez or Spark jobs, making it easier for analysts familiar with SQL to query big datasets.
+ - *Presto* (now Trino) and *Impala* are MPP (massively parallel processing) engines offering faster ad‑hoc query performance by keeping data in memory and bypassing the Hadoop stack.
 
 - **Workflow Orchestration**:
-  - *Oozie* originally targeted Hadoop jobs with XML‑based workflows.
-  - *Airflow* uses Python DAGs (directed acyclic graphs) and has become popular due to its extensibility and rich user interface.
+ - *Oozie* originally targeted Hadoop jobs with XML‑based workflows.
+ - *Airflow* uses Python DAGs (directed acyclic graphs) and has become popular due to its extensibility and rich user interface.
 
 - **Resource Management**:
-  - *YARN* (Yet Another Resource Negotiator) schedules containers for various frameworks on Hadoop clusters.
-  - *Mesos* and *Kubernetes* provide more general-purpose resource orchestration, enabling multi‑tenant clusters.
+ - *YARN* (Yet Another Resource Negotiator) schedules containers for various frameworks on Hadoop clusters.
+ - *Mesos* and *Kubernetes* provide more general-purpose resource orchestration, enabling multi‑tenant clusters.
 
 > **Real‑World Scenario:** An online retailer operates a Kafka cluster that ingests clickstream events from every page visit. These events are written in hourly partitions to HDFS. A nightly Spark batch job aggregates customer sessions, computes metrics such as average time on page and conversion rate, and writes the results to a Hive table. A data scientist accesses that table from a Jupyter notebook to train a collaborative filtering recommendation model. Once validated, the model is exported to a serving layer, which personalizes each user’s homepage during their next session.
 
@@ -155,12 +155,12 @@ Relational database management systems (RDBMS) such as Oracle, MySQL or SQL Serv
 
 ```mermaid
 flowchart TB
-    RDBMS[Traditional RDBMS] --> Scalability[Scale-up limits]
-    RDBMS --> Performance[Slow large joins]
-    RDBMS --> Schema[Rigid schemas]
-    Scalability --> BigData[Need horizontal scaling]
-    Performance --> BigData
-    Schema --> BigData
+ RDBMS[Traditional RDBMS] --> Scalability[Scale-up limits]
+ RDBMS --> Performance[Slow large joins]
+ RDBMS --> Schema[Rigid schemas]
+ Scalability --> BigData[Need horizontal scaling]
+ Performance --> BigData
+ Schema --> BigData
 ```
 
 > **Example:** A bank uses an RDBMS to store customer records and transaction history. When the fraud team attempts to correlate millions of transaction logs with customer profiles to detect anomalies, query runtimes explode and the operational database becomes sluggish. The data must be migrated to a Hadoop cluster or a cloud-based data lake where specialized analytics can run without impacting the core banking system.
@@ -202,7 +202,7 @@ Intelligent data analysis involves extracting insights from data using statistic
 
 ```mermaid
 flowchart LR
-    A[Define problem] --> B[Gather data] --> C[Explore & clean] --> D[Feature engineering] --> E[Model training] --> F[Validation] --> G[Deployment] --> H[Monitoring]
+ A[Define problem] --> B[Gather data] --> C[Explore & clean] --> D[Feature engineering] --> E[Model training] --> F[Validation] --> G[Deployment] --> H[Monitoring]
 ```
 
 > **Example:** A ride‑sharing company wants to predict demand in each city zone for the upcoming hour. They merge GPS logs (structured) with weather forecasts (semi‑structured) and historic demand. After cleaning and feature engineering (e.g., time of day, holiday flag), they train a gradient boosting machine. The model runs every 15 minutes, and its outputs are fed to a dispatch algorithm that adjusts driver incentives dynamically.
@@ -217,18 +217,18 @@ Different kinds of data dictate different storage, processing and analytical str
 - **Structured** – Fixed schema, easily queried with SQL. Examples include relational tables, spreadsheets, and time series with uniform columns. Both rows and columns are defined in advance.
 - **Semi‑structured** – Contains tags or markers to separate elements, but fields may vary from record to record. JSON and XML fit this category. Many NoSQL databases (e.g., MongoDB, Couchbase) are designed for such data. A weblog where different events have different attributes (click, purchase, search) is semi‑structured.
 - **Unstructured** – Lacks any predefined structure. Typical examples:
-  - Text documents such as articles, emails, or social-media posts. Natural language processing (NLP) techniques are required to extract meaning.
-  - Multimedia content like photos, videos, and audio, which require feature extraction or deep learning to analyse.
-  - Binary files such as PDFs and proprietary formats.
+ - Text documents such as articles, emails, or social-media posts. Natural language processing (NLP) techniques are required to extract meaning.
+ - Multimedia content like photos, videos, and audio, which require feature extraction or deep learning to analyse.
+ - Binary files such as PDFs and proprietary formats.
 
 ```mermaid
 flowchart TB
-    A[Structured Data]
-    B[Semi-structured Data]
-    C[Unstructured Data]
-    A -->|tables| D[(DBMS)]
-    B -->|JSON/XML| E[(NoSQL)]
-    C -->|text, images| F[(File Store)]
+ A[Structured Data]
+ B[Semi-structured Data]
+ C[Unstructured Data]
+ A -->|tables| D[(DBMS)]
+ B -->|JSON/XML| E[(NoSQL)]
+ C -->|text, images| F[(File Store)]
 ```
 
 ### Implications
@@ -250,9 +250,9 @@ A complete analytics workflow comprises multiple stages from ingestion to decisi
 3. **Data Transformation** – Apply business logic to raw data: parse nested JSON, flatten arrays, normalise text (lowercase, remove punctuation), compute aggregates, and join disparate sources. Transformation frameworks include Apache NiFi, AWS Glue, dbt, and Spark SQL.
 
 4. **Data Storage** – Choose appropriate systems based on query patterns and data types:
-   - **Data warehouse** (e.g., Snowflake, Redshift, BigQuery) for structured, curated data optimized for fast SQL queries.
-   - **Data lake** (e.g., S3, ADLS, HDFS) for raw, heterogeneous data.
-   Many organisations adopt a **lakehouse** architecture (Databricks, Delta Lake) that blends aspects of both.
+ - **Data warehouse** (e.g., Snowflake, Redshift, BigQuery) for structured, curated data optimized for fast SQL queries.
+ - **Data lake** (e.g., S3, ADLS, HDFS) for raw, heterogeneous data.
+ Many organisations adopt a **lakehouse** architecture (Databricks, Delta Lake) that blends aspects of both.
 
 5. **Modelling/Analysis** – Data scientists use languages such as Python, R, Scala or Julia. Libraries include Pandas for data manipulation, Scikit‑Learn for classical ML, TensorFlow/PyTorch for deep learning, and Spark MLlib for distributed modelling. Notebooks (Jupyter, Zeppelin) enable interactive exploration and documentation.
 
@@ -264,7 +264,7 @@ A complete analytics workflow comprises multiple stages from ingestion to decisi
 
 ```mermaid
 flowchart TB
-    A[Data Collection] --> B[Data Cleaning] --> C[Transformation] --> D[Storage] --> E[Modelling/Analysis] --> F[Evaluation] --> G[Deployment/Reporting] --> H[Maintenance]
+ A[Data Collection] --> B[Data Cleaning] --> C[Transformation] --> D[Storage] --> E[Modelling/Analysis] --> F[Evaluation] --> G[Deployment/Reporting] --> H[Maintenance]
 ```
 
 ### Tools overview
@@ -315,8 +315,8 @@ Although analysis and reporting both involve data, they serve very different fun
 
 ```mermaid
 graph LR
-    Analysis[Analysis] -->|Iterative| Models[Models & Insights]
-    Reporting[Reporting] -->|Periodic| Dashboards[Dashboards & Reports]
+ Analysis[Analysis] -->|Iterative| Models[Models & Insights]
+ Reporting[Reporting] -->|Periodic| Dashboards[Dashboards & Reports]
 ```
 
 ### Summary

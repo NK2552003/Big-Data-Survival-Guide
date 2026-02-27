@@ -12,8 +12,8 @@
 9. [Decaying Window](#9-decaying-window)
 10. [Real Time Analytics Platform (RTAP) Applications](#10-real-time-analytics-platform-rtap-applications)
 11. [Case Studies](#11-case-studies)
-    - [Real Time Sentiment Analysis](#real-time-sentiment-analysis)
-    - [Stock Market Predictions](#stock-market-predictions)
+ - [Real Time Sentiment Analysis](#real-time-sentiment-analysis)
+ - [Stock Market Predictions](#stock-market-predictions)
 
 ---
 
@@ -32,19 +32,19 @@ Understanding these qualities is essential for mining data streams effectively. 
 
 ```mermaid
 flowchart LR
-    A[Unbounded] --> B[High Velocity]
-    B --> C[One-pass]
-    C --> D[Approximate]
-    D --> A
+ A[Unbounded] --> B[High Velocity]
+ B --> C[One-pass]
+ C --> D[Approximate]
+ D --> A
 ```
 
 ```mermaid
 flowchart LR
-    Source[Data Source]
-    --> Ingest[Ingestion Layer]
-    --> Process[Processing Engine]
-    --> Store[Storage/Sink]
-    --> Visual[Dashboard/Model]
+ Source[Data Source]
+ --> Ingest[Ingestion Layer]
+ --> Process[Processing Engine]
+ --> Store[Storage/Sink]
+ --> Visual[Dashboard/Model]
 ```
 
 > **Illustrative example:** A network monitoring system generates a stream of packet headers. An intrusion detection operator filters suspicious IPs (filtering), maintains counts of distinct sources (distinct counting), and triggers an alert if a high‑volume anomaly is detected.
@@ -67,27 +67,27 @@ The architecture is often implemented as a directed acyclic graph (DAG) of opera
 
 ```mermaid
 flowchart TB
-    subgraph Source
-      S1[Sensor]
-      S2[Log]
-    end
-    subgraph Ingest
-      K[Kafka]
-    end
-    subgraph Processing
-      F[Flink]
-      S[Storm]
-    end
-    subgraph Storage
-      R[Redis]
-      H[HDFS]
-    end
-    S1 --> K
-    S2 --> K
-    K --> F
-    K --> S
-    F --> R
-    S --> H
+ subgraph Source
+ S1[Sensor]
+ S2[Log]
+ end
+ subgraph Ingest
+ K[Kafka]
+ end
+ subgraph Processing
+ F[Flink]
+ S[Storm]
+ end
+ subgraph Storage
+ R[Redis]
+ H[HDFS]
+ end
+ S1 --> K
+ S2 --> K
+ K --> F
+ K --> S
+ F --> R
+ S --> H
 ``` 
 
 ## 3. Stream Computing
@@ -114,10 +114,10 @@ Sampling is often used for exploratory analysis, building sketches, or reducing 
 
 ```mermaid
 sequenceDiagram
-    participant Stream
-    participant Reservoir
-    Stream->>Reservoir: send element
-    Reservoir-->>Stream: update sample
+ participant Stream
+ participant Reservoir
+ Stream->>Reservoir: send element
+ Reservoir-->>Stream: update sample
 ```
 
 > **Example:** To estimate the average transaction amount on a busy e‑commerce site, reservoir sampling can maintain a small fixed-size subset of recent purchases from millions of orders per hour.
@@ -134,9 +134,9 @@ Filtering can be pushed to the source (e.g., sensor firmware) or executed in the
 
 ```mermaid
 flowchart TD
-    Stream -->|apply predicate| Filter[Filter operator]
-    Filter --> Output
-    Filter --> Drop[Drop]
+ Stream -->|apply predicate| Filter[Filter operator]
+ Filter --> Output
+ Filter --> Drop[Drop]
 ```
 > **Example:** A stock ticker stream may filter out trades below a configurable minimum size to reduce noise before further analysis. In Flink, this might be implemented with a `KeyedProcessFunction` that keeps track of market open/close status.
 
@@ -184,10 +184,10 @@ For binary streams, these methods allow efficient tracking of recent activity.
 
 ```mermaid
 graph LR
-    Window[Sliding Window]
-    --> Bucket1[Bucket A]
-    --> Bucket2[Bucket B]
-    --> Bucket3[Bucket C]
+ Window[Sliding Window]
+ --> Bucket1[Bucket A]
+ --> Bucket2[Bucket B]
+ --> Bucket3[Bucket C]
 ```
 
 > **Example:** A smart meter emitting on/off signals uses a decaying window to weight recent usage more heavily when forecasting demand.
@@ -216,9 +216,9 @@ Platforms often combine a messaging layer (Kafka), a computation engine (Flink/S
 
 ```mermaid
 flowchart LR
-    Kafka --> Flink --> ElasticSearch
-    Flink --> Dashboard
-    Kafka --> ModelServe
+ Kafka --> Flink --> ElasticSearch
+ Flink --> Dashboard
+ Kafka --> ModelServe
 ``` 
 
 ## 11. Case Studies

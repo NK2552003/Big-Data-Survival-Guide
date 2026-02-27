@@ -88,10 +88,10 @@ Storage categories:
 
 - **Distributed File Systems**: e.g., HDFS (Hadoop), AWS S3, Azure Blob Storage
 - **Databases**:
-    - NoSQL (MongoDB, Cassandra)
-    - Relational DB (MySQL, PostgreSQL)
-    - Columnar DB (HBase, BigTable)
-    - Cloud-native (DynamoDB, Google Spanner)
+ - NoSQL (MongoDB, Cassandra)
+ - Relational DB (MySQL, PostgreSQL)
+ - Columnar DB (HBase, BigTable)
+ - Cloud-native (DynamoDB, Google Spanner)
 - **Data Warehouses**: Like Snowflake, BigQuery, Redshift for structured & analytical storage
 - **Data Lakes**: Storage of raw data in its native form (semi/unstructured)
 
@@ -129,9 +129,9 @@ Formats:
 
 - **Text-based**: CSV, JSON, XML
 - **Binary formats**:
-    - Avro (row-oriented, schema-based)
-    - Parquet (columnar storage)
-    - ORC (optimized for Hive)
+ - Avro (row-oriented, schema-based)
+ - Parquet (columnar storage)
+ - ORC (optimized for Hive)
 
 Storage formats help optimize read/write performance and compression.
 
@@ -183,49 +183,29 @@ Tools:
 
 Here's how everything fits together in a typical data processing workflow:
 
-```
-                     ┌───────────────┐
-                     │ Data Sources  │
-                     └───────────────┘
-                            ↓
-        ┌─────────────────────────────────┐
-        │         Data Ingestion          │
-        │   Kafka / Flume / Logstash      │
-        └─────────────────────────────────┘
-                            ↓
-              ┌──────────────────────────────┐
-              │       Distributed Storage    │
-              │   HDFS / S3 / NoSQL DBs      │
-              └──────────────────────────────┘
-                            ↓
-       ┌─────────────────────────────────────┐
-       │        Data Processing Layer       │
-       │ Spark / Flink / MapReduce / Beam   │
-       └─────────────────────────────────────┘
-                            ↓
-       ┌─────────────────────────────────────┐
-       │         Query & Analytics          │
-       │     Hive / Presto / Druid / BI     │
-       └─────────────────────────────────────┐
-                            ↓
-     Dashboards, ML Models, Reporting, APIs
-
+```mermaid
+flowchart TD
+    A[Data Sources] --> B[Data Ingestion\nKafka / Flume / Logstash]
+    B --> C[Distributed Storage\nHDFS / S3 / NoSQL DBs]
+    C --> D[Data Processing Layer\nSpark / Flink / MapReduce / Beam]
+    D --> E[Query and Analytics\nHive / Presto / Druid / BI]
+    E --> F[Dashboards · ML Models · Reporting · APIs]
 ```
 
 ## 6. The Three Pillars of Big Data
 
 1. **Data Lake**:
-    - Raw storage (unstructured)
-    - Cheap and scalable
-    - Used by data scientists for experiments
+ - Raw storage (unstructured)
+ - Cheap and scalable
+ - Used by data scientists for experiments
 2. **Data Warehouse**:
-    - Structured, analytical
-    - Optimized for pre-processed data
-    - Used by analysts and BI tools
+ - Structured, analytical
+ - Optimized for pre-processed data
+ - Used by analysts and BI tools
 3. **Data Pipeline**:
-    - Processes that convert raw → clean → usable data
-    - Often built with orchestration tools
-    - Pipelines are the backbone of the ecosystem
+ - Processes that convert raw → clean → usable data
+ - Often built with orchestration tools
+ - Pipelines are the backbone of the ecosystem
 
 ## 7. Real-World Example: Netflix Big Data Platform
 

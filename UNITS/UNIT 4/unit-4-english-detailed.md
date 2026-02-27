@@ -40,17 +40,17 @@ CREATE EXTERNAL TABLE events_raw(line STRING)
 LOCATION '/data/events';
 
 CREATE TABLE events(
-  userid STRING,
-  ts BIGINT,
-  action STRING
+ userid STRING,
+ ts BIGINT,
+ action STRING
 )
 PARTITIONED BY (dt STRING)
 ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe';
 
 INSERT INTO events PARTITION(dt='20260226')
 SELECT get_json_object(line,'$.user'),
-       get_json_object(line,'$.timestamp'),
-       get_json_object(line,'$.action')
+ get_json_object(line,'$.timestamp'),
+ get_json_object(line,'$.action')
 FROM events_raw
 WHERE get_json_object(line,'$.dt')='20260226';
 ```
@@ -66,10 +66,10 @@ WHERE get_json_object(line,'$.dt')='20260226';
 
 ```mermaid
 flowchart LR
-    A[LOAD logs] --> B[FILTER errors]
-    B --> C[GROUP BY ip]
-    C --> D[COUNT]
-    D --> E[STORE to HDFS]
+ A[LOAD logs] --> B[FILTER errors]
+ B --> C[GROUP BY ip]
+ C --> D[COUNT]
+ D --> E[STORE to HDFS]
 ```
 
 The diagram illustrates how a simple Pig script is translated into a sequence of map and reduce tasks. Pig’s optimizer can combine steps like FILTER and GROUP if possible.
@@ -119,15 +119,15 @@ Hive runs as a set of services on top of Hadoop. Key components include both ser
 
 ```mermaid
 flowchart TB
-    subgraph Client
-      C1[Beeline/JDBC]-->HS2[HiveServer2]
-      C2[CLI]-->Driver
-    end
-    HS2-->Metastore
-    Driver-->Metastore
-    Driver-->YARN[Execution Engine]
-    YARN-->HDFS[Storage]
-    YARN-->MapReduce/Tez/Spark
+ subgraph Client
+ C1[Beeline/JDBC]-->HS2[HiveServer2]
+ C2[CLI]-->Driver
+ end
+ HS2-->Metastore
+ Driver-->Metastore
+ Driver-->YARN[Execution Engine]
+ YARN-->HDFS[Storage]
+ YARN-->MapReduce/Tez/Spark
 ```
 
 Services can be secured with Kerberos, and the metastore can be shared among multiple Hive instances or other tools such as Spark, Impala, Presto, Flink, and Hadoop MapReduce. External tools query the same metadata, ensuring consistency across the ecosystem. Backups of the metastore are critical for disaster recovery; snapshotting the underlying RDBMS and HDFS files keeps Hive healthy.
@@ -150,9 +150,9 @@ HiveQL is a dialect of SQL supporting typical data‑warehouse operations and ex
 
 ```sql
 CREATE TABLE sales (
-  id BIGINT,
-  date STRING,
-  amount DOUBLE
+ id BIGINT,
+ date STRING,
+ amount DOUBLE
 )
 PARTITIONED BY (country STRING)
 CLUSTERED BY (id) INTO 32 BUCKETS
@@ -166,7 +166,7 @@ SELECT country, SUM(amount) FROM sales GROUP BY country;
 
 -- a window function example
 SELECT country, date,
-       SUM(amount) OVER (PARTITION BY country ORDER BY date ROWS BETWEEN 3 PRECEDING AND CURRENT ROW) AS rolling_4_day
+ SUM(amount) OVER (PARTITION BY country ORDER BY date ROWS BETWEEN 3 PRECEDING AND CURRENT ROW) AS rolling_4_day
 FROM sales;
 ```
 
@@ -179,19 +179,19 @@ HiveQL queries are translated into execution plans; simple `SELECT` statements m
 
 ```mermaid
 flowchart TB
-    Client --> HMaster
-    Client --> RegionServer1
-    Client --> RegionServer2
-    HMaster --> ZK[ZooKeeper ensemble]
-    RegionServer1 --> HDFS
-    RegionServer2 --> HDFS
+ Client --> HMaster
+ Client --> RegionServer1
+ Client --> RegionServer2
+ HMaster --> ZK[ZooKeeper ensemble]
+ RegionServer1 --> HDFS
+ RegionServer2 --> HDFS
 ```
 
 ### Example: row key design
 
 Choosing an effective row key is critical for performance. For example, storing time-series data by timestamp alone can cause hotspotting. A common pattern is to prepend a hash prefix:
 
-| Original key        | Prefixed key         |
+| Original key | Prefixed key |
 |---------------------|----------------------|
 | `20260226:device123` | `ab:20260226:device123` |
 
@@ -201,9 +201,9 @@ This spreads writes across multiple regions.
 
 ```mermaid
 flowchart LR
-    A[Initial region]
-    A -->|split at mid-key| B[Region 1]
-    A -->|split at mid-key| C[Region 2]
+ A[Initial region]
+ A -->|split at mid-key| B[Region 1]
+ A -->|split at mid-key| C[Region 2]
 ```
 
 When a region grows past a threshold (HBase default 10 GB), the HMaster instructs it to split, redistributing load.
@@ -250,9 +250,9 @@ IBM’s BigInsights is a commercial distribution of Hadoop with enterprise featu
 
 ```spl
 stream<rstring symbol, float price> Market = ReadFromSocket("")
-   -> Filter(price > 0.0)
-   -> AggregateWindow(timeBatch(1 sec), avg(price) as avgPrice)
-   -> WriteToKafka(topic: "avgPrices");
+ -> Filter(price > 0.0)
+ -> AggregateWindow(timeBatch(1 sec), avg(price) as avgPrice)
+ -> WriteToKafka(topic: "avgPrices");
 ```
 
 > **Use case:** A stock trading firm uses Streams to analyse market feeds and issue alerts when price thresholds are crossed, while BigInsights stores historical tick data for backtesting. Another example is a telecom provider analysing call detail records in real time to detect fraud and route high-priority alerts.
@@ -261,10 +261,10 @@ A simple Streams topology might look like:
 
 ```mermaid
 flowchart LR
-    source[Market Feed] --> op1[Filter Bad Data]
-    op1 --> op2[Compute Moving Avg]
-    op2 --> op3[Detect Threshold]
-    op3 --> sink[Alert Service]
+ source[Market Feed] --> op1[Filter Bad Data]
+ op1 --> op2[Compute Moving Avg]
+ op2 --> op3[Detect Threshold]
+ op3 --> sink[Alert Service]
 ```
 
 BigInsights and Streams together illustrate how IBM addresses both batch and real-time analytics within the Hadoop ecosystem.

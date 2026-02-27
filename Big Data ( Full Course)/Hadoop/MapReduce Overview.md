@@ -147,8 +147,8 @@ Example reducer input:
 
 ```
 "Hadoop" → [1, 1]
-"is"     → [1, 1]
-"fast"   → [1]
+"is" → [1, 1]
+"fast" → [1]
 "scalable" → [1]
 ```
 
@@ -228,10 +228,10 @@ powerful → [1]
 ### Reducer Output:
 
 ```
-big       2
-data      2
-is        2
-powerful  1
+big 2
+data 2
+is 2
+powerful 1
 ```
 
 # **Where MapReduce Is Used**

@@ -7,9 +7,9 @@
 - What is data?
 - How raw data becomes useful information
 - Types of data:
-    - Structured (e.g., tables)
-    - Unstructured (e.g., images, videos)
-    - Semi-structured (e.g., JSON, XML)
+ - Structured (e.g., tables)
+ - Unstructured (e.g., images, videos)
+ - Semi-structured (e.g., JSON, XML)
 - Simple examples from daily life
 
 ### 1.2 Systems of Record vs Systems of Analysis
@@ -34,10 +34,10 @@
 
 - Relational Databases (e.g., MySQL, PostgreSQL): store data in tables
 - NoSQL Databases (short overview only):
-    - Key-value stores (e.g., Redis)
-    - Document stores (e.g., MongoDB)
-    - Column-based stores (e.g., Cassandra)
-    - Graph-based stores (e.g., Neo4j)
+ - Key-value stores (e.g., Redis)
+ - Document stores (e.g., MongoDB)
+ - Column-based stores (e.g., Cassandra)
+ - Graph-based stores (e.g., Neo4j)
 
 ### 2.4 Overview of Strengths & Limitations
 
@@ -135,10 +135,10 @@
 
 - Understanding billing and free tier limits
 - Core services for data:
-    - S3
-    - EC2
-    - IAM
-    - Glue (optional)
+ - S3
+ - EC2
+ - IAM
+ - Glue (optional)
 
 ### 7.3 Setting Up on AWS Free Tier
 

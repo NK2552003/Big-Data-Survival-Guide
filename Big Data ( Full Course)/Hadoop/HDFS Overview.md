@@ -34,14 +34,14 @@ Very simple to visualize:
 
 ```mermaid
 graph TD
-    A[NameNode<br/>Master Server] --> B[DataNode 1]
-    A --> C[DataNode 2]
-    A --> D[DataNode 3]
-    
-    style A fill:#ff9999,stroke:#333,stroke-width:3px
-    style B fill:#99ccff,stroke:#333,stroke-width:2px
-    style C fill:#99ccff,stroke:#333,stroke-width:2px
-    style D fill:#99ccff,stroke:#333,stroke-width:2px
+ A[NameNode<br/>Master Server] --> B[DataNode 1]
+ A --> C[DataNode 2]
+ A --> D[DataNode 3]
+
+ style A fill:#ff9999,stroke:#333,stroke-width:3px
+ style B fill:#99ccff,stroke:#333,stroke-width:2px
+ style C fill:#99ccff,stroke:#333,stroke-width:2px
+ style D fill:#99ccff,stroke:#333,stroke-width:2px
 ```
 
 ## **NameNode**
@@ -49,9 +49,9 @@ graph TD
 - Stores **metadata** (not actual data)
 - File names, permissions, block locations
 - Keeps mapping:
-    
-    `/movies/moviesdata.jsonl → block1 on DN1, block2 on DN3, block3 on DN2`
-    
+
+ `/movies/moviesdata.jsonl → block1 on DN1, block2 on DN3, block3 on DN2`
+
 
 ## **DataNode**
 
@@ -122,9 +122,9 @@ Process:
 
 1. Client asks NameNode: "I want to write a file."
 2. NameNode replies with:
-    
-    "Here are 3 DataNodes for the first block."
-    
+
+ "Here are 3 DataNodes for the first block."
+
 3. Client sends block data to DataNode 1.
 4. DataNode 1 streams it to DataNode 2.
 5. DataNode 2 streams it to DataNode 3.

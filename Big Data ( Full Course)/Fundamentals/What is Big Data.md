@@ -48,9 +48,9 @@ Traditional DBs are limited to structured data and require schema beforehand. Bi
 ### **3. Variety**
 
 - Data comes in many formats:
-    - **Structured**: Tables, spreadsheets
-    - **Semi-structured**: JSON files, XML
-    - **Unstructured**: Images, videos, text, click logs
+ - **Structured**: Tables, spreadsheets
+ - **Semi-structured**: JSON files, XML
+ - **Unstructured**: Images, videos, text, click logs
 
 ### **4. Veracity**
 
@@ -60,9 +60,9 @@ Traditional DBs are limited to structured data and require schema beforehand. Bi
 ### **5. Value**
 
 - The purpose of handling Big Data is to derive **business value** that drives decision making:
-    - Predicting customer behavior
-    - Detecting fraud
-    - Generating personalized recommendations
+ - Predicting customer behavior
+ - Detecting fraud
+ - Generating personalized recommendations
 
 ## **How Traditional and Big Data Systems Differ**
 
@@ -90,10 +90,10 @@ Imagine Flipkart during a Big Billion Day sale:
 - Millions of users browse and order simultaneously.
 - Each click, add-to-cart, payment, delivery update generates data.
 - They need systems that can:
-    - Store massive data instantly
-    - Process user behavior real-time
-    - Show personalized offers
-    - Detect fraudulent transactions
+ - Store massive data instantly
+ - Process user behavior real-time
+ - Show personalized offers
+ - Detect fraudulent transactions
 
 Traditional tools **cannot handle this scale and dynamic**, so Big Data architecture is used.
 

@@ -36,11 +36,11 @@ A Big Data platform is an environment where data is stored, managed, and analyze
 
 ```mermaid
 flowchart LR
-    A["Data Sources"] --> B["Ingestion: Kafka, Flume"];
-    B --> C["Distributed Storage: HDFS, S3"];
-    C --> D["Processing: Spark, MapReduce"];
-    D --> E["Analytics and BI Tools"];
-    E --> F["Users and Applications"];
+ A["Data Sources"] --> B["Ingestion: Kafka, Flume"];
+ B --> C["Distributed Storage: HDFS, S3"];
+ C --> D["Processing: Spark, MapReduce"];
+ D --> E["Analytics and BI Tools"];
+ E --> F["Users and Applications"];
 ```
 
 > **Real World Use:** Netflix stores user activity logs in HDFS and processes them with Spark to recommend movies.
@@ -103,12 +103,12 @@ Pipeline steps:
 
 ## 7. Analysis vs Reporting
 
-| Item     | Analysis                                | Reporting                         |
+| Item | Analysis | Reporting |
 |----------|-----------------------------------------|-----------------------------------|
-| Purpose  | Extract insights, test hypotheses      | Summarize past events             |
-| Data     | Raw, detailed data                      | Aggregated data                   |
-| Tools    | Statistical/ML tools                    | BI/reporting software             |
-| Output   | Models, patterns, predictions           | Tables, charts, dashboards        |
+| Purpose | Extract insights, test hypotheses | Summarize past events |
+| Data | Raw, detailed data | Aggregated data |
+| Tools | Statistical/ML tools | BI/reporting software |
+| Output | Models, patterns, predictions | Tables, charts, dashboards |
 
 > **Example:** An analyst uses Spark to segment customers (analysis). Marketing gets a monthly sales dashboard (reporting).
 
