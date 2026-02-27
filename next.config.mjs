@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   output: 'export',
-  basePath: '/Big-Data-Survival-Guide',
+  trailingSlash: true,
+  basePath: isProd ? '/Big-Data-Survival-Guide' : '',
+  assetPrefix: isProd ? '/Big-Data-Survival-Guide/' : '',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   reactStrictMode: true,
   swcMinify: true,
