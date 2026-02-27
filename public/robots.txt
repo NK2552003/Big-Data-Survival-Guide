@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://big-data-survival-guide.vercel.app/sitemap.xml
+Sitemap: https://nk2552003.github.io/Big-Data-Survival-Guide/sitemap.xml

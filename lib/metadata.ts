@@ -4,8 +4,8 @@ import { DocNode } from './docs';
 export const siteConfig = {
   name: 'Big Data Survival Guide',
   description: 'A comprehensive guide to navigating the big data landscape with practical insights and best practices.',
-  url: 'https://big-data-survival-guide.vercel.app',
-  ogImage: 'https://big-data-survival-guide.vercel.app/og-image.png',
+  url: 'https://nk2552003.github.io/Big-Data-Survival-Guide',
+  ogImage: 'https://nk2552003.github.io/Big-Data-Survival-Guide/Image/image.png',
   links: {
     github: 'https://github.com/NK2552003/Big-Data-Survival-Guide',
     author: 'https://github.com/NK2552003',
@@ -45,7 +45,9 @@ export function getDocMetadata(
       description,
       images: [siteConfig.ogImage],
     },
-    canonical: url,
+    alternates: {
+      canonical: url,
+    },
   };
 }
 
