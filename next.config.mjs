@@ -8,8 +8,6 @@ const nextConfig = {
   assetPrefix: isProd ? '/Big-Data-Survival-Guide/' : '',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   reactStrictMode: true,
-  swcMinify: true,
-  cacheComponents: true,
   images: {
     unoptimized: true,
   },
