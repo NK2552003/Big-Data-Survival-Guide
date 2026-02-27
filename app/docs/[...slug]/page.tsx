@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import Link from 'next/link';
 import { buildNavTree, findDocBySlug, getBreadcrumbs, getAdjacentDocs } from '@/lib/docs';
 import { getMDXContent, extractTableOfContents, getReadingTime, getGitHubEditUrl, mdxOptions, stripTopicsSection } from '@/lib/mdx';
 import { Breadcrumb } from '@/components/breadcrumb';
@@ -96,7 +97,7 @@ export default async function DocPage({ params }: DocPageProps) {
       {/* Navigation Footer */}
       <nav className="mt-12 border-t border-border pt-8 grid sm:grid-cols-2 gap-4">
         {prev && (
-          <a
+          <Link
             href={`/docs/${prev.slug}`}
             className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-accent-blue transition-colors group"
           >
@@ -105,11 +106,11 @@ export default async function DocPage({ params }: DocPageProps) {
               <p className="text-xs text-muted-foreground uppercase tracking-wide">Previous</p>
               <p className="font-medium group-hover:text-accent-blue transition-colors">{prev.title}</p>
             </div>
-          </a>
+          </Link>
         )}
 
         {next && (
-          <a
+          <Link
             href={`/docs/${next.slug}`}
             className="flex items-center justify-between gap-3 p-4 rounded-lg border border-border hover:border-accent-blue transition-colors group sm:col-start-2"
           >
@@ -118,7 +119,7 @@ export default async function DocPage({ params }: DocPageProps) {
               <p className="font-medium group-hover:text-accent-blue transition-colors">{next.title}</p>
             </div>
             <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent-blue transition-colors flex-shrink-0" />
-          </a>
+          </Link>
         )}
       </nav>
     </article>
