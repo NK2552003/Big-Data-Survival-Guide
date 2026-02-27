@@ -82,7 +82,7 @@ exit
 
 ---
 
-## 3. Stopping and Cleaning Up 🧹
+## 3. Stopping and Cleaning Up 
 
 When you are done with the cluster, stop and remove the containers and network using the same `docker-compose.yml` file:
 

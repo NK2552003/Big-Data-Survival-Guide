@@ -56,9 +56,9 @@ Graphical tools help evaluate models:
 
 ```mermaid
 flowchart LR
-    Scatter --> Line
-    Line --> Residuals
-    Residuals --> QQ
+ Scatter --> Line
+ Line --> Residuals
+ Residuals --> QQ
 ``` 
 
 ## 6. Visual Data Analysis Techniques

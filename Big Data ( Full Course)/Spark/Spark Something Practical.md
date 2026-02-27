@@ -35,7 +35,7 @@ val rdd = sc.textFile("hdfs:///data/data.csv")
 rdd.take(10).foreach(println)
 ```
 - For Mac
- 
+
 ```jsx
 val rdd = sc.textFile("hdfs://localhost:9000/<foldername>/data.csv")
 rdd.take(10).foreach(println)

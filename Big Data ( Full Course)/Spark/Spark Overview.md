@@ -43,15 +43,15 @@ Spark operates on clusters of machines. It distributes data across multiple node
 Spark consists of three main actors:
 
 1. **Driver Program**
-    - This is the main application that you write.
-    - It creates SparkSessions, builds execution plans, and coordinates workers.
+ - This is the main application that you write.
+ - It creates SparkSessions, builds execution plans, and coordinates workers.
 2. **Cluster Manager**
-    - Allocates resources to Spark.
-    - Examples: YARN, Kubernetes, Standalone.
+ - Allocates resources to Spark.
+ - Examples: YARN, Kubernetes, Standalone.
 3. **Executors**
-    - Worker processes that run tasks.
-    - They perform actual data processing.
-    - They store data in memory for fast reuse.
+ - Worker processes that run tasks.
+ - They perform actual data processing.
+ - They store data in memory for fast reuse.
 
 Spark is designed around the idea of data parallelism and distributed execution.
 
@@ -98,13 +98,13 @@ Instead, it builds a DAG representing all transformations.
 Two types of operations:
 
 - **Transformations** (lazy)
-    
-    Examples: map, filter, groupBy
-    
+
+ Examples: map, filter, groupBy
+
 - **Actions** (trigger execution)
-    
-    Examples: show, count, collect
-    
+
+ Examples: show, count, collect
+
 
 The DAG is submitted when an action is called.
 
@@ -205,25 +205,25 @@ Spark + HDFS is a common architecture used in industry.
 # Why Spark Is So Fast
 
 1. In-memory computation
-    
-    Data stays in RAM instead of writing to disk repeatedly.
-    
+
+ Data stays in RAM instead of writing to disk repeatedly.
+
 2. DAG optimization
-    
-    Eliminates unnecessary operations and reorganizes tasks.
-    
+
+ Eliminates unnecessary operations and reorganizes tasks.
+
 3. Catalyst Optimizer
-    
-    Efficient query planning for SQL/DataFrames.
-    
+
+ Efficient query planning for SQL/DataFrames.
+
 4. Tungsten Execution Engine
-    
-    Highly optimized memory and CPU usage.
-    
+
+ Highly optimized memory and CPU usage.
+
 5. Reduced disk usage
-    
-    Only spills to disk when necessary.
-    
+
+ Only spills to disk when necessary.
+
 
 # Spark API Layers (Beginner Overview)
 
@@ -267,21 +267,21 @@ It is expensive and should be minimized.
 # Spark Deployment Modes
 
 1. Local Mode
-    
-    Runs on a single machine with multiple threads.
-    
+
+ Runs on a single machine with multiple threads.
+
 2. Standalone Mode
-    
-    Spark manages its own cluster.
-    
+
+ Spark manages its own cluster.
+
 3. YARN Mode
-    
-    Uses Hadoop’s resource manager.
-    
+
+ Uses Hadoop’s resource manager.
+
 4. Kubernetes Mode
-    
-    Popular in cloud environments.
-    
+
+ Popular in cloud environments.
+
 
 # Fault Tolerance in Spark
 

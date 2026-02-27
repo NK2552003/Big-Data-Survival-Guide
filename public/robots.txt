@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nk2552003.github.io/Big-Data-Survival-Guide/sitemap.xml

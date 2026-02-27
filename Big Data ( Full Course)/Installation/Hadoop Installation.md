@@ -53,13 +53,13 @@ This is your Linux environment.
 # 3. Learn Basic Linux Commands (Beginner-Friendly)
 
 ```bash
-pwd      # shows current directory
-ls       # lists files
-cd dir   # go into folder
-cd ..    # go back one folder
-mkdir a  # create folder
-rm f     # delete file
-sudo     # run command as admin
+pwd # shows current directory
+ls # lists files
+cd dir # go into folder
+cd .. # go back one folder
+mkdir a # create folder
+rm f # delete file
+sudo # run command as admin
 ```
 
 Enough to follow this guide.
@@ -281,14 +281,14 @@ Paste this:
 ```
 <?xml version="1.0"?>
 <configuration>
-  <property>
-    <name>fs.defaultFS</name>
-    <value>hdfs://localhost:9000</value>
-  </property>
-  <property>
-    <name>hadoop.tmp.dir</name>
-    <value>/home/hadoop/hadoop_tmp</value>
-  </property>
+ <property>
+ <name>fs.defaultFS</name>
+ <value>hdfs://localhost:9000</value>
+ </property>
+ <property>
+ <name>hadoop.tmp.dir</name>
+ <value>/home/hadoop/hadoop_tmp</value>
+ </property>
 </configuration>
 ```
 
@@ -303,18 +303,18 @@ Paste:
 ```
 <?xml version="1.0"?>
 <configuration>
-  <property>
-    <name>dfs.replication</name>
-    <value>1</value>
-  </property>
-  <property>
-    <name>dfs.namenode.name.dir</name>
-    <value>file:/home/hadoop/hadoop_tmp/hdfs/namenode</value>
-  </property>
-  <property>
-    <name>dfs.datanode.data.dir</name>
-    <value>file:/home/hadoop/hadoop_tmp/hdfs/datanode</value>
-  </property>
+ <property>
+ <name>dfs.replication</name>
+ <value>1</value>
+ </property>
+ <property>
+ <name>dfs.namenode.name.dir</name>
+ <value>file:/home/hadoop/hadoop_tmp/hdfs/namenode</value>
+ </property>
+ <property>
+ <name>dfs.datanode.data.dir</name>
+ <value>file:/home/hadoop/hadoop_tmp/hdfs/datanode</value>
+ </property>
 </configuration>
 ```
 
@@ -329,10 +329,10 @@ Paste:
 ```
 <?xml version="1.0"?>
 <configuration>
-  <property>
-    <name>mapreduce.framework.name</name>
-    <value>yarn</value>
-  </property>
+ <property>
+ <name>mapreduce.framework.name</name>
+ <value>yarn</value>
+ </property>
 </configuration>
 ```
 
@@ -347,10 +347,10 @@ Paste:
 ```
 <?xml version="1.0"?>
 <configuration>
-  <property>
-    <name>yarn.nodemanager.aux-services</name>
-    <value>mapreduce_shuffle</value>
-  </property>
+ <property>
+ <name>yarn.nodemanager.aux-services</name>
+ <value>mapreduce_shuffle</value>
+ </property>
 </configuration>
 ```
 

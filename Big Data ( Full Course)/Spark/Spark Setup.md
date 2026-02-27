@@ -67,9 +67,9 @@ sudo tar -xzf /tmp/spark-4.0.1-bin-hadoop3.tgz -C /opt/spark --strip-components=
 - `tar -xzf` extracts a `.tgz` archive
 - `C /opt/spark` tells tar to extract *inside* that folder
 - `-strip-components=1` removes the top-level internal folder
-    
-    (so files are placed cleanly directly under `/opt/spark`)
-    
+
+ (so files are placed cleanly directly under `/opt/spark`)
+
 
 After this step:
 
@@ -112,12 +112,12 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 
 - `SPARK_HOME` tells Linux where Spark is installed
 - Adding Spark’s `bin` folder to `PATH` allows running:
-    - `spark-shell`
-    - `pyspark`
-    - `spark-submit`
+ - `spark-shell`
+ - `pyspark`
+ - `spark-submit`
 - `HADOOP_CONF_DIR` is critical
-    - Spark uses Hadoop’s config files to access HDFS and YARN
-    - Without it, Spark cannot read `hdfs:///` paths
+ - Spark uses Hadoop’s config files to access HDFS and YARN
+ - Without it, Spark cannot read `hdfs:///` paths
 
 Reload `.bashrc`:
 

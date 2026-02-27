@@ -172,13 +172,13 @@ Add:
 ```xml
 <configuration>
  <property>
-  <name>fs.defaultFS</name>
-  <value>hdfs://localhost:9000</value>
+ <name>fs.defaultFS</name>
+ <value>hdfs://localhost:9000</value>
  </property>
 
  <property>
-  <name>hadoop.tmp.dir</name>
-  <value>/Users/<username>/hadoop</value>
+ <name>hadoop.tmp.dir</name>
+ <value>/Users/<username>/hadoop</value>
  </property>
 </configuration>
 ```
@@ -195,20 +195,20 @@ Add:
 
 ```xml
 <configuration>
-  <property>
-    <name>dfs.replication</name>
-    <value>1</value>
-  </property>
+ <property>
+ <name>dfs.replication</name>
+ <value>1</value>
+ </property>
 
-  <property>
-    <name>dfs.namenode.name.dir</name>
-    <value>file:///Users/<your-username>/hadoop/data/name</value>
-  </property>
+ <property>
+ <name>dfs.namenode.name.dir</name>
+ <value>file:///Users/<your-username>/hadoop/data/name</value>
+ </property>
 
-  <property>
-    <name>dfs.datanode.data.dir</name>
-    <value>file:///Users/<your-username>/hadoop/data/data</value>
-  </property>
+ <property>
+ <name>dfs.datanode.data.dir</name>
+ <value>file:///Users/<your-username>/hadoop/data/data</value>
+ </property>
 </configuration>
 ```
 
@@ -230,25 +230,25 @@ Add:
 
 ```xml
 <configuration>
-  <property>
-    <name>mapreduce.framework.name</name>
-    <value>yarn</value>
-  </property>
+ <property>
+ <name>mapreduce.framework.name</name>
+ <value>yarn</value>
+ </property>
 
-  <property>
-    <name>yarn.app.mapreduce.am.env</name>
-    <value>HADOOP_MAPRED_HOME=/opt/homebrew/opt/hadoop/libexec</value>
-  </property>
+ <property>
+ <name>yarn.app.mapreduce.am.env</name>
+ <value>HADOOP_MAPRED_HOME=/opt/homebrew/opt/hadoop/libexec</value>
+ </property>
 
-  <property>
-    <name>mapreduce.map.env</name>
-    <value>HADOOP_MAPRED_HOME=/opt/homebrew/opt/hadoop/libexec</value>
-  </property>
+ <property>
+ <name>mapreduce.map.env</name>
+ <value>HADOOP_MAPRED_HOME=/opt/homebrew/opt/hadoop/libexec</value>
+ </property>
 
-  <property>
-    <name>mapreduce.reduce.env</name>
-    <value>HADOOP_MAPRED_HOME=/opt/homebrew/opt/hadoop/libexec</value>
-  </property>
+ <property>
+ <name>mapreduce.reduce.env</name>
+ <value>HADOOP_MAPRED_HOME=/opt/homebrew/opt/hadoop/libexec</value>
+ </property>
 </configuration>
 ```
 
@@ -265,10 +265,10 @@ Add:
 ```xml
 <?xml version="1.0"?>
 <configuration>
-  <property>
-    <name>yarn.nodemanager.aux-services</name>
-    <value>mapreduce_shuffle</value>
-  </property>
+ <property>
+ <name>yarn.nodemanager.aux-services</name>
+ <value>mapreduce_shuffle</value>
+ </property>
 </configuration>
 ```
 
@@ -319,10 +319,10 @@ stop-yarn.sh
 
 ## 11. Hadoop Web Interfaces
 
-| Service              | URL                                            |
+| Service | URL |
 | -------------------- | ---------------------------------------------- |
-| NameNode UI          | [http://localhost:9870](http://localhost:9870) |
-| DataNode UI          | [http://localhost:9864](http://localhost:9864) |
+| NameNode UI | [http://localhost:9870](http://localhost:9870) |
+| DataNode UI | [http://localhost:9864](http://localhost:9864) |
 | YARN ResourceManager | [http://localhost:8088](http://localhost:8088) |
 
 ---

@@ -3,10 +3,10 @@
 ## VEER MADHO SINGH BHANDARI UTTARAKHAND TECHNICAL UNIVERSITY, DEHRADUN
 
 ### Course Information
-**Course Name:** Big Data Analytics  
-**Course Code:** CST-043  
-**Credits:** 3:0:0 (L:T:P) - 3 Credits  
-**Department:** Computer Science and Engineering  
+**Course Name:** Big Data Analytics 
+**Course Code:** CST-043 
+**Credits:** 3:0:0 (L:T:P) - 3 Credits 
+**Department:** Computer Science and Engineering 
 
 ---
 
@@ -52,7 +52,7 @@ On successful completion of this course, the students will be able to:
 
 ## UNIT 2 — Mining Data Streams
 
-> **Recommended for Better Understanding:** Kick off this unit with the **[🎯 Fun Version of Unit 2 →](UNITS/UNIT%202/unit-2-english-fun.md)** — Niagara Falls stream analogies, Formula 1 IoT examples, DGIM algorithm walkthroughs, Reservoir Sampling code, and a full mindmap! Way easier than jumping straight into theory.
+> **Recommended for Better Understanding:** Kick off this unit with the **[ Fun Version of Unit 2 →](UNITS/UNIT%202/unit-2-english-fun.md)** — Niagara Falls stream analogies, Formula 1 IoT examples, DGIM algorithm walkthroughs, Reservoir Sampling code, and a full mindmap! Way easier than jumping straight into theory.
 
 - **Introduction to Stream Concepts** ([Detailed](UNITS/UNIT%202/unit-2-english-detailed.md#1-introduction-to-stream-concepts) | [Summary](UNITS/UNIT%202/unit-2-english-summary.md#1-introduction-to-stream-concepts) | [Hinglish Summary](UNITS/UNIT%202/unit-2-hinglish-summary.md#1-stream-concepts-ka-parichay) | [Fun Read](UNITS/UNIT%202/unit-2-english-fun.md))
 
@@ -134,7 +134,7 @@ On successful completion of this course, the students will be able to:
 
 ## UNIT 5 — Predictive Analytics
 
-> **Recommended for Better Understanding:** Finish strong with the **[🎯 Fun Version of Unit 5 →](UNITS/UNIT%205/unit-5-english-fun.md)** — GPS/rearview-mirror analogy for the analytics spectrum, OLS tug-of-war explanation, Anscombe's Quartet demo, full diagnostic dashboard code in Python, Plotly Dash interactive app, Altair brushing-and-linking, end-to-end MLOps pipeline and a churn prediction FastAPI!
+> **Recommended for Better Understanding:** Finish strong with the **[ Fun Version of Unit 5 →](UNITS/UNIT%205/unit-5-english-fun.md)** — GPS/rearview-mirror analogy for the analytics spectrum, OLS tug-of-war explanation, Anscombe's Quartet demo, full diagnostic dashboard code in Python, Plotly Dash interactive app, Altair brushing-and-linking, end-to-end MLOps pipeline and a churn prediction FastAPI!
 
 - **Predictive Analytics** ([Detailed](UNITS/UNIT%205/unit-5-english-detailed.md#1-predictive-analytics) | [Summary](UNITS/UNIT%205/unit-5-english-summary.md#1-predictive-analytics) | [Hinglish Summary](UNITS/UNIT%205/unit-5-hinglish-summary.md#1-predictive-analytics) | [ Fun Read](UNITS/UNIT%205/unit-5-english-fun.md))
 
@@ -193,8 +193,8 @@ On successful completion of this course, the students will be able to:
 |------|------------|----------------|
 | Unit 1 | [ Open](UNITS/UNIT%201/unit-1-english-fun.md) | 5V card/shoebox analogies, Analytics Maturity Ladder, Mermaid diagrams, mnemonics |
 | Unit 2 | [ Open](UNITS/UNIT%202/unit-2-english-fun.md) | Niagara Falls analogy, Reservoir Sampling code, HyperLogLog, DGIM walkthrough |
-| Unit 3  | [ Open](UNITS/UNIT%203/unit-3-english-fun.md) | Annotated Java WordCount, Python Streaming, YARN scheduler comparison, HDFS cheatsheet |
-| Unit 4  | [ Open](UNITS/UNIT%204/unit-4-english-fun.md) | Pig Swiss army knife, Hive Services diagram, HBase 4D model, ZooKeeper smoke-alarm |
+| Unit 3 | [ Open](UNITS/UNIT%203/unit-3-english-fun.md) | Annotated Java WordCount, Python Streaming, YARN scheduler comparison, HDFS cheatsheet |
+| Unit 4 | [ Open](UNITS/UNIT%204/unit-4-english-fun.md) | Pig Swiss army knife, Hive Services diagram, HBase 4D model, ZooKeeper smoke-alarm |
 | Unit 5 | [ Open](UNITS/UNIT%205/unit-5-english-fun.md) | OLS tug-of-war, Anscombe's Quartet, diagnostic dashboard, Dash app, FastAPI churn model |
 
 **For University Examination Preparation:**

@@ -35,12 +35,12 @@ Hadoop originated from two papers published by Google in 2003: the GFS (Google F
 
 ```mermaid
 timeline
-    2003 : GFS and MapReduce papers published
-    2005 : Hadoop top-level project
-    2006 : Yahoo! adoption
-    2011 : Hadoop 1.0 release
-    2013 : Hadoop 2/YARN
-    2017 : Spark on YARN
+ 2003 : GFS and MapReduce papers published
+ 2005 : Hadoop top-level project
+ 2006 : Yahoo! adoption
+ 2011 : Hadoop 1.0 release
+ 2013 : Hadoop 2/YARN
+ 2017 : Spark on YARN
 ```
 
 ## 2. Hadoop Distributed File System (HDFS)
@@ -63,13 +63,13 @@ Additional aspects:
 
 ```mermaid
 flowchart LR
-    Client --> NameNode
-    Client --> DataNode1
-    Client --> DataNode2
-    Client --> DataNode3
-    NameNode -->|metadata| DataNode1
-    NameNode -->|metadata| DataNode2
-    NameNode -->|metadata| DataNode3
+ Client --> NameNode
+ Client --> DataNode1
+ Client --> DataNode2
+ Client --> DataNode3
+ NameNode -->|metadata| DataNode1
+ NameNode -->|metadata| DataNode2
+ NameNode -->|metadata| DataNode3
 ```
 
 > **Example:** A 1 TB file will be split into ~8192 blocks (assuming 128 MB). With a replication factor of 3, 24 TB of storage is consumed across the cluster. If a DataNode storing some blocks crashes, the NameNode automatically schedules new replicas on other healthy nodes.
@@ -94,15 +94,15 @@ Beyond these, a rich ecosystem has grown around Hadoop:
 
 ```mermaid
 graph LR
-    HDFS --> YARN
-    YARN --> MapReduce
-    YARN --> Spark
-    HDFS --> HBase
-    Sqoop --> HDFS
-    Flume --> HDFS
-    Hive --> MapReduce
-    Pig --> MapReduce
-    Zookeeper -->|coord| HBase
+ HDFS --> YARN
+ YARN --> MapReduce
+ YARN --> Spark
+ HDFS --> HBase
+ Sqoop --> HDFS
+ Flume --> HDFS
+ Hive --> MapReduce
+ Pig --> MapReduce
+ Zookeeper -->|coord| HBase
 ```
 ## 4. Analyzing Data with Hadoop
 
@@ -130,48 +130,48 @@ A basic MapReduce program in Java comprises a `Mapper` class, a `Reducer` class,
 
 ```java
 public class WordCount {
-  public static class TokenizerMapper
-       extends Mapper<Object, Text, Text, IntWritable>{
-    private final static IntWritable one = new IntWritable(1);
-    private Text word = new Text();
-    public void map(Object key, Text value, Context context
-                    ) throws IOException, InterruptedException {
-      StringTokenizer itr = new StringTokenizer(value.toString());
-      while (itr.hasMoreTokens()) {
-        word.set(itr.nextToken());
-        context.write(word, one);
-      }
-    }
-  }
+ public static class TokenizerMapper
+ extends Mapper<Object, Text, Text, IntWritable>{
+ private final static IntWritable one = new IntWritable(1);
+ private Text word = new Text();
+ public void map(Object key, Text value, Context context
+ ) throws IOException, InterruptedException {
+ StringTokenizer itr = new StringTokenizer(value.toString());
+ while (itr.hasMoreTokens()) {
+ word.set(itr.nextToken());
+ context.write(word, one);
+ }
+ }
+ }
 
-  public static class IntSumReducer
-       extends Reducer<Text,IntWritable,Text,IntWritable> {
-    private IntWritable result = new IntWritable();
-    public void reduce(Text key, Iterable<IntWritable> values,
-                       Context context
-                       ) throws IOException, InterruptedException {
-      int sum = 0;
-      for (IntWritable val : values) {
-        sum += val.get();
-      }
-      result.set(sum);
-      context.write(key, result);
-    }
-  }
+ public static class IntSumReducer
+ extends Reducer<Text,IntWritable,Text,IntWritable> {
+ private IntWritable result = new IntWritable();
+ public void reduce(Text key, Iterable<IntWritable> values,
+ Context context
+ ) throws IOException, InterruptedException {
+ int sum = 0;
+ for (IntWritable val : values) {
+ sum += val.get();
+ }
+ result.set(sum);
+ context.write(key, result);
+ }
+ }
 
-  public static void main(String[] args) throws Exception {
-    Configuration conf = new Configuration();
-    Job job = Job.getInstance(conf, "word count");
-    job.setJarByClass(WordCount.class);
-    job.setMapperClass(TokenizerMapper.class);
-    job.setCombinerClass(IntSumReducer.class);
-    job.setReducerClass(IntSumReducer.class);
-    job.setOutputKeyClass(Text.class);
-    job.setOutputValueClass(IntWritable.class);
-    FileInputFormat.addInputPath(job, new Path(args[0]));
-    FileOutputFormat.setOutputPath(job, new Path(args[1]));
-    System.exit(job.waitForCompletion(true) ? 0 : 1);
-  }
+ public static void main(String[] args) throws Exception {
+ Configuration conf = new Configuration();
+ Job job = Job.getInstance(conf, "word count");
+ job.setJarByClass(WordCount.class);
+ job.setMapperClass(TokenizerMapper.class);
+ job.setCombinerClass(IntSumReducer.class);
+ job.setReducerClass(IntSumReducer.class);
+ job.setOutputKeyClass(Text.class);
+ job.setOutputValueClass(IntWritable.class);
+ FileInputFormat.addInputPath(job, new Path(args[0]));
+ FileOutputFormat.setOutputPath(job, new Path(args[1]));
+ System.exit(job.waitForCompletion(true) ? 0 : 1);
+ }
 }
 ```
 
@@ -190,15 +190,15 @@ MapReduce jobs are split into map and reduce phases. Each map task processes a c
 
 ```mermaid
 sequenceDiagram
-    participant Client
-    participant JT as JobTracker
-    participant NM as NodeManager
-    Client->>JT: submit job
-    JT->>NM: assign map task
-    NM-->>JT: task status
-    JT->>NM: assign reduce task
-    NM-->>JT: task status
-    NM->>HDFS: write output
+ participant Client
+ participant JT as JobTracker
+ participant NM as NodeManager
+ Client->>JT: submit job
+ JT->>NM: assign map task
+ NM-->>JT: task status
+ JT->>NM: assign reduce task
+ NM-->>JT: task status
+ NM->>HDFS: write output
 ```
 
 ## 12. Failures

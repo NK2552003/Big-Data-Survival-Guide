@@ -221,12 +221,12 @@ hadoop jar myjob.jar MainClass /input /output
 
 ```
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar \
-  -input /movies/moviesdata.jsonl \
-  -output /movies/output \
-  -mapper mapper.py \
-  -reducer reducer.py \
-  -file mapper.py \
-  -file reducer.py
+ -input /movies/moviesdata.jsonl \
+ -output /movies/output \
+ -mapper mapper.py \
+ -reducer reducer.py \
+ -file mapper.py \
+ -file reducer.py
 ```
 
 # 10. Helpful Shortcuts
