@@ -45,7 +45,6 @@ Big Data Analytics Notes/
 1. **Start Here:** Read [Syllabus_Outline.md](Syllabus_Outline.md) - it's like a movie trailer but for coursework!
 2. **Academic Study:** Navigate to [UNITS/](UNITS/) - where theory lives and thrives
  `Recommanded:- you should learn from *-*-fun.md files, it will be easy for you to understand`
-    `Recommanded:- you should learn from *-*-fun.md files, it will be easy for you to understand`
 4. **Practical Learning:** Dive into [Big Data ( Full Course)/](Big%20Data%20(%20Full%20Course)/) - warning: may cause excessive caffeine consumption
 
 ### For Exam Preparation (Panic Mode Activated!)
